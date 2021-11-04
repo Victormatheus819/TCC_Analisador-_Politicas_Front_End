@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import InicialPage from './components/InitialPage/InitialPage';
+import InicialPage from './components/InitialPage/InitialPage.vue';
 
 export default {
   name: 'App',
