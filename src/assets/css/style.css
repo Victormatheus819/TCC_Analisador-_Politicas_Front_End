@@ -1,8 +1,15 @@
 .dot {
-    height: 35px;
-    width: 35px;
-    background-color: #bbb;
+    height: 50px;
+    width: 50px;
+    background-color: #EFEFEF;
     border-radius: 50%;
-    display: inline-block;
+    border: solid #000 1px ;
+   
     align-items: center;
   }
+
+.center{
+  font-size : 25px;
+  margin-top:5px;
+  margin-left:16px;
+}  

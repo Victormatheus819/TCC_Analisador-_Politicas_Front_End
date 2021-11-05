@@ -9,20 +9,17 @@
     </v-app-bar>
 
     <v-main>
-      <InicialPage/>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import InicialPage from './components/InitialPage/InitialPage.vue';
 
 export default {
   name: 'App',
 
-  components: {
-    InicialPage,
-  },
+  
 
   data: () => ({
     //
