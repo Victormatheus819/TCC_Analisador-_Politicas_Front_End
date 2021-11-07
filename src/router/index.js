@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import InitialPage from '../components/InitialPage/InitialPage.vue'
 import LoadingPage from '../components/LoadingPage/LoadingPage.vue'
-
+import ResultPage from '../components/ResultPage/ResultPage.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -15,6 +15,11 @@ const routes = [
     path: '/loading-page',
     name: 'LoadingPage',
     component: LoadingPage
+  },
+  {
+    path: '/result-page',
+    name: 'ResultPage',
+    component: ResultPage
   },
   {
     path: '/about',
