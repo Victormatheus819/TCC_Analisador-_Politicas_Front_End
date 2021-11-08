@@ -3,7 +3,8 @@ export default {
     name: 'LoadingPage',
     components:{ProgressBar},   
     data: () => ({
-     curiosidades:["fato 1","fato 2"] 
+     curiosidades:["fato 1","fato 2"] ,
+     increasing_pct:100
     }),
    methods:{
     redirect(){

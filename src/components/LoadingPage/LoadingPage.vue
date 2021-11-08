@@ -7,20 +7,20 @@
         </v-row> 
     <v-row justify="center">
       <v-col cols="4" lg="7">
-      <progress-bar size="massive" val="60" text="60%" ></progress-bar>
+      <progress-bar size="massive" :val="increasing_pct" :text="increasing_pct + '%'"  ></progress-bar>
       </v-col> 
       <v-col cols="1" lg="1">
-          <v-btn elevation="2" color="white" @click="redirect()"  x-large> 
+          <v-btn elevation="2" v-if="increasing_pct!=100" color="white" @click="redirect()"  x-large> 
                     Cancelar
           </v-btn>
-           <v-btn elevation="2" color="swamp_green" @click="redirect()" class="white--text button" x-large> 
-                    Analisar
+           <v-btn elevation="2" v-else color="swamp_green" @click="redirect()" class="white--text button" x-large> 
+                    Ver resultado
           </v-btn>
       </v-col> 
     </v-row>  
     <v-row justify="center">
       <v-col cols="4" lg="7">
-        <v-carousel >
+        <v-carousel cycle >
         <v-carousel-item
           v-for="(curiosidade) in curiosidades"
           :key="curiosidade"

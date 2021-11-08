@@ -6,7 +6,7 @@ export default {
     }),
    methods:{
     redirect(){
-      this.$router.push('/result-page') 
+      this.$router.push('home') 
     }
   },
   mounted(){

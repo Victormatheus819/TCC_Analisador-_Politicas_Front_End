@@ -18,11 +18,11 @@
 
 export default {
   name: 'App',
-
-  
-
   data: () => ({
     //
   }),
+   mounted(){
+     console.log("There is a cofee is waiting for you")
+   },
 };
 </script>

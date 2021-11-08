@@ -4,17 +4,21 @@
             <v-col cols="12" lg="8" md="12">
                 <p >something</p> 
             </v-col>
-        </v-row>   
-        <v-row justify="center">
-            <v-col cols="9" lg="6" md="6">
-                <v-text-field  label="Cole sua Url" solo></v-text-field> 
-            </v-col>
-            <v-col cols="2"  lg="2" md="6" >
-                    <v-btn elevation="2" color="swamp_green" @click="redirect()" class="white--text" large> 
-                    Analisar
-                    </v-btn>
-            </v-col>
         </v-row>
+        <v-form  ref="form" v-model="valid" lazy-validation>   
+            <v-row justify="center">
+                    <v-col cols="9" lg="6" md="6">
+                        
+                        <v-text-field  :rules="[v => !!v || 'Url é requerida']"  label="Cole sua Url" solo></v-text-field> 
+                        
+                    </v-col>
+                    <v-col cols="2"  lg="2" md="6" >
+                            <v-btn elevation="2" color="swamp_green" @click="validate" class="white--text" large> 
+                            Analisar
+                            </v-btn>
+                    </v-col>   
+            </v-row>
+        </v-form>    
         <v-row  justify="center">
             <v-col cols="2" lg="2" md="2" >
                 <p style="font-size:20px" >COMO USAR?</p> 

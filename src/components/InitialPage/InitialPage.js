@@ -2,15 +2,14 @@ export default {
     name: 'InicialPage',
     
     data: () => ({
-     flag : true 
+     flag : true ,
+     valid: true,
     }),
-    
-   mounted(){
-     console.log("There is a cofee is waiting for you")
-   },
    methods:{
-    redirect(){
-      this.$router.push('/loading-page') 
+    validate(){
+      if(this.$refs.form.validate()){
+        this.$router.push('/loading-page') 
+      }
     }
   }
   }
