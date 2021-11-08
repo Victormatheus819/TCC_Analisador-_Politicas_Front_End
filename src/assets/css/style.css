@@ -1,12 +1,62 @@
-.dot {
-    height: 50px;
-    width: 50px;
-    background-color: #EFEFEF;
-    border-radius: 50%;
-    border: solid #000 1px ;
-   
-    align-items: center;
+.container
+{
+  max-width: 96%;
+  margin: 0 auto;
+}
+.container div 
+{
+  display: block;
+}
+.section
+{
+  padding: 3% 2% 3%;
+  justify-items: center;
+}
+.center 
+{
+  text-align: center;
+}
+.title-section
+{
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.sp-text 
+{
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 22px;
+}
+
+/**************************** PARA DISPOSITIVIOS MÓVEIS ****************************/
+@media only screen and (max-width: 640px) {
+  .title-section 
+  {
+    font-size: 27px;
   }
+  .sp-text 
+  {
+    font-size: 14px;
+  }
+}
+
+
+/*********************** verificar responsividade *********************************/
+
+.dot 
+{
+  height: 50px;
+  width: 50px;
+  background-color: #EFEFEF;
+  border-radius: 50%;
+  border: solid #000 1px ;
+   
+  align-items: center;
+}
 
 .center{
   font-size : 25px;
