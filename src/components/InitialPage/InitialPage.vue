@@ -10,7 +10,7 @@
             </span>
             <v-col class="search-section">
                 <input placeholder="Indique ou cole a URL da política aqui" />
-                <button class="btn-confirm" @cdivck="redirect()">ANALISAR</button>
+                <button class="btn-confirm" @click="redirect()">ANALISAR</button>
             </v-col>
         </v-row>
 
