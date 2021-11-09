@@ -16,7 +16,6 @@ export default new Vuetify({
             light_grey: '#EFEFEF',
             white: '#FFFFFF',
             swamp_green :'6AA84F',
-             
           },
         },
       },

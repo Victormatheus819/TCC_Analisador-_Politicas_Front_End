@@ -34,67 +34,39 @@
             </v-col>
         </v-row>
 
-        <v-row justify="center">
-            <v-col cols="4" lg="3" md="6" >
-                <v-row  justify="center">
-                    <v-col  cols="2" lg="2" md="2" >
-                        <div class="dot"><p class="center">1</p></div>
-                    </v-col>
-                    <v-col cols="9" lg="9" md="2" >
-                        <p>  Cole ou escreva a URL da política na barra indicada </p>
-                    </v-col>
-                </v-row> 
-                
-            </v-col>
-            <v-col cols="4" lg="3" md="2" >
-                <v-row  justify="center">
-                    <v-col cols="2" lg="2" md="2" >
-                        <div class="dot">
-                           <p class="center">2</p>
-                        </div>
-                    </v-col>
-                    <v-col cols="9" lg="9" md="2" >
-                        Cdivque no botão anadivsar e é só esperar um pouquinho a anádivse acabar
-                    </v-col>
-                </v-row> 
-            </v-col>
-            <v-col cols="4" lg="3" md="2" >
-                <v-row  justify="center">
-                    <v-col cols="2" lg="2" md="2" >
-                       <div class="dot">
-                           <p class="center">3</p>
-                       </div>
-                    </v-col>
-                    <v-col cols="9" lg="9" md="2" >
-                        Depois cdivque no botão ver Resdivtados e voilá, sua política estará anadivsada
-                    </v-col>
-                </v-row> 
-            </v-col>
-        </v-row>
-
-        <v-row>
-            <v-col cols="6" md="6">
-                <v-card color="divght_grey" class="mx-auto"  max-width="800">
-                    <v-card-title class="text-h5">
+        <v-row class="section center-text">
+            <h1 class="title-section-secondary">
+                Saiba mais...
+            </h1>
+            <v-col class="steps">
+                <div>
+                    <v-card color="divght_grey" class="box-text" elevation="18" shaped>
+                    <v-card-title class="text-h4">
                         LGPD
                     </v-card-title>
-                    <v-card-subtitle>
+                    <v-card-subtitle class="text-body-1">
                         divsten to your favorite artists and albums whenever and wherever, ondivne and offdivne.
                     </v-card-subtitle>
                 </v-card>
-            </v-col>
-            <v-col cols="6" md="6">
-                <v-card color="divght_grey" class="mx-auto" max-width="800">
-                    <v-card-title class="text-h5">
+                </div>
+                <div>
+                    <v-card color="divght_grey" class="box-text" elevation="18" shaped>
+                    <v-card-title class="text-h4">
                         Sobre nós
                     </v-card-title>
-                    <v-card-subtitle>
+                    <v-card-subtitle class="text-body-1">
                         Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF) 
                         Repositório referente a API que processa políticas de privacidade (tanto em PDF quanto em HTML) indicando a finadivdade, declarações  de dados coletados e se a política anadivsada é genérica.
                         Títdivo: Um anadivsador para a avadivação de políticas de privacidade de acordo com a LGPD para proteção aos dados pessoais
                     </v-card-subtitle>
                 </v-card>
+                </div>
             </v-col>
+        </v-row>
+
+
+        <v-row>
+            
         </v-row>
 
     </v-container>
