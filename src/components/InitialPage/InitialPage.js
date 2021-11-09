@@ -1,6 +1,6 @@
+
 export default {
     name: 'InicialPage',
-    
     data: () => ({
      flag : true ,
      valid: true,

@@ -82,7 +82,7 @@ Título: Um analisador para a avaliação de políticas de privacidade de acordo
             </v-card>
             </v-col>
       
-        </v-row>
+        </v-row> 
   </v-container>
 </template>
 <style src="../../assets/css/style.css"></style>
