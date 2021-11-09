@@ -6,21 +6,21 @@
             </v-col>
         </v-row> 
     <v-row justify="center">
-      <v-col cols="4" lg="7">
-      <progress-bar size="massive" val="60" text="60%" ></progress-bar>
+      <v-col cols="12" lg="7">
+      <progress-bar size="massive" bar-color="#185ADB" :val="increasing_pct" class="mx-auto" :text="increasing_pct + '%'"  ></progress-bar>
       </v-col> 
-      <v-col cols="1" lg="1">
-          <v-btn elevation="2" color="white" @click="redirect()"  x-large> 
+      <v-col cols="6" lg="1">
+          <v-btn elevation="2" v-if="increasing_pct!=100" class="mx-auto" color="white"  x-large> 
                     Cancelar
           </v-btn>
-           <v-btn elevation="2" color="swamp_green" @click="redirect()" class="white--text button" x-large> 
-                    Analisar
+           <v-btn elevation="2" v-else color="swamp_green" @click="redirect()" class="white--text button" x-large> 
+                    Ver resultado
           </v-btn>
       </v-col> 
     </v-row>  
     <v-row justify="center">
-      <v-col cols="4" lg="7">
-        <v-carousel >
+      <v-col cols="12" lg="7">
+        <v-carousel cycle >
         <v-carousel-item
           v-for="(curiosidade) in curiosidades"
           :key="curiosidade"
@@ -44,6 +44,8 @@
       </v-carousel>
       </v-col> 
     </v-row>
-  </v-container>     
+      
+  </v-container> 
+  
 </template>
 <script src="./LoadingPage.js">
