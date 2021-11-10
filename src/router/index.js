@@ -14,7 +14,8 @@ const routes = [
   {
     path: '/loading-page',
     name: 'LoadingPage',
-    component: LoadingPage
+    component: LoadingPage,
+    props: true
   },
   {
     path: '/result-page',

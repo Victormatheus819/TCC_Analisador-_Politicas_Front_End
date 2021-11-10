@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@vue-a11y/vlibras": "^0.1.0",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
+    "socket.io-client": "^4.3.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vue-simple-progress": "^1.1.1",

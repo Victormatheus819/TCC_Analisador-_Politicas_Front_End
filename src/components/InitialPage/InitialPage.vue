@@ -9,7 +9,7 @@
             <v-row justify="center">
                     <v-col cols="9" lg="6" md="6">
                         
-                        <v-text-field  :rules="[v => !!v || 'Url é requerida']"  label="Cole sua Url" solo></v-text-field> 
+                        <v-text-field  :rules="[v => !!v || 'Url é requerida']"  id="url" label="Cole sua Url" solo></v-text-field> 
                         
                     </v-col>
                     <v-col cols="2"  lg="2" md="6" >
