@@ -8,10 +8,12 @@
             <span class="sp-text">
                 Analise para mostrar a finalidade e dados coletados indicados pelas empresas
             </span>
-            <v-col class="search-section">
-                <input placeholder="Indique ou cole a URL da política aqui" />
-                <button class="btn-confirm" @click="redirect()">ANALISAR</button>
-            </v-col>
+            <v-form ref="form" v-model="valid" lazy-validation>   
+                <v-col class="search-section">
+                    <input placeholder="Indique ou cole a URL da política aqui" />
+                    <button class="btn-confirm" @click="validate()">ANALISAR</button>
+                </v-col>
+            </v-form>
         </v-row>
 
         <v-row class="section center-text">
