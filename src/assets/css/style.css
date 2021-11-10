@@ -44,7 +44,8 @@
   margin: 20px 0 20px;
   position: relative;
 }
-.search-section input {
+.search-section input 
+{
   width: 68%;
   border: 2px solid #2f0ee7;
   box-shadow: 0 4px 10px rgb(1 11 59 / 40%);
@@ -69,6 +70,23 @@
   display: inline-block;
   border: none;
   color: #fdfdfd;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s;
+  margin-left: 10px;
+}
+.btn-cancel 
+{
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgb(196 1 1 / 40%);
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -khtml-border-radius: 12px;
+  border-radius: 12px;
+  padding: 18px 40px;
+  display: inline-block;
+  color: #ff0000;
   font-size: 1.05em;
   font-weight: 600;
   cursor: pointer;
@@ -125,6 +143,16 @@
   display: flex;
   text-align: left; 
 }
+.loading-text 
+{
+  font-size: 2.25em;
+}
+.item-center
+{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
 
 /**************************** PARA DISPOSITIVIOS MÓVEIS ****************************/
 @media only screen and (max-width: 640px) {
@@ -140,11 +168,13 @@
   {
     font-size: 15px;
   }
-  .search-section input 
+  .search-section input,
+  .loading-input 
   {
-    width: 100%;
+    width: 100% !important;
   }
-  .btn-confirm 
+  .btn-confirm,
+  .btn-cancel 
   {
     width: 100%;
     margin: 10px 0 0;
