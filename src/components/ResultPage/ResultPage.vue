@@ -14,7 +14,7 @@
                 <v-card-title class="text-h5">
                     Dados de coleta encontradas na política indicada:
                 </v-card-title>
-                 <v-card-subtitle>
+                 <v-card-subtitle id="dados_subtitle">
                 </v-card-subtitle>
             </v-card>
             </v-col>
@@ -23,7 +23,7 @@
                 <v-card-title class="text-h5">
                    Finalidade de tratamento de dados encontradas na política indicada:
                 </v-card-title>
-                 <v-card-subtitle id="dados_subtitle">
+                 <v-card-subtitle id="finalidade_subtitle">
                     
                      </v-card-subtitle>
             </v-card>

@@ -20,7 +20,8 @@ const routes = [
   {
     path: '/result-page',
     name: 'ResultPage',
-    component: ResultPage
+    component: ResultPage,
+    props: true
   },
   {
     path: '/about',
