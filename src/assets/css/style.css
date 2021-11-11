@@ -16,6 +16,10 @@
 {
   text-align: center;
 }
+.center-left
+{
+  align-items: left;
+}
 .title-section-principal,
 .title-section-secondary
 {
@@ -153,6 +157,27 @@
   justify-content: center;
   align-items: center;
 }
+.result-review
+{
+  margin: 20px;
+}
+.subtitle-result
+{
+  text-align: left;
+  margin: 12px 0 5px 0 !important;
+  font-size: 1.4em !important;
+  font-weight: 600 !important;
+}
+.dados-marker
+{
+  background-color: #ffc773;
+  font-weight: 600 !important;
+}
+.finalidade-marker
+{
+  background-color: #f5f37e;
+  font-weight: 600 !important;
+}
 
 /**************************** PARA DISPOSITIVIOS MÓVEIS ****************************/
 @media only screen and (max-width: 640px) {
@@ -193,4 +218,10 @@
   {
     margin-top: 10px;
   }
+  .dados-marker,
+  .finalidade-marker
+  {
+    font-weight: 550 !important;
+  }
+
 }

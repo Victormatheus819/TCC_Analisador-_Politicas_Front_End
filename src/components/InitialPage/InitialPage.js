@@ -9,7 +9,7 @@ export default {
    methods:{
     validate(){
       if(this.$refs.form.validate()){
-         this.url= document.getElementById("url").value;
+        this.url= document.getElementById("url").value;
         this.$router.push({ name: 'LoadingPage', params: { url: this.url } }) 
       }
     },
