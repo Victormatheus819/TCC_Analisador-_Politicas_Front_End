@@ -13,7 +13,7 @@
             <h1 class="title-section-secondary">
                 Resultado da análise
             </h1>
-            <span class="sp-text">
+            <span class="sp-text" id="generic_flag" >
                 Informação de politíca genérica aqui
             </span>
                 <div class="result-review">
@@ -49,4 +49,7 @@
 
     </v-container>
 </template>
-<script src="./ResultPage.js">
+
+<style src="../../assets/css/style.css"></style>
+
+<script src="./ResultPage.js"></script>

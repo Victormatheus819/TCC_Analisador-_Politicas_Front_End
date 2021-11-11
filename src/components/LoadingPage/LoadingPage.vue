@@ -11,7 +11,7 @@
 
 			<v-col class="search-section">
 
-				<v-progress-linear color="light-blue" height="56" value="10" striped elevation="18" style="margin-block-end: 10px;">
+				<v-progress-linear color="light-blue" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
 					<strong class="loading-text">
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
@@ -58,4 +58,6 @@
 
 </template>
 
-<script src="./LoadingPage.js"/>
+<style src="../../assets/css/style.css"></style>
+
+<script src="./LoadingPage.js"></script>
