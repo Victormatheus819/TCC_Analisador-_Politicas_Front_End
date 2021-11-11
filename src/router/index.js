@@ -14,12 +14,14 @@ const routes = [
   {
     path: '/loading-page',
     name: 'LoadingPage',
-    component: LoadingPage
+    component: LoadingPage,
+    props: true
   },
   {
     path: '/result-page',
     name: 'ResultPage',
-    component: ResultPage
+    component: ResultPage,
+    props: true
   },
   {
     path: '/about',
