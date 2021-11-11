@@ -52,4 +52,4 @@
 
 <style src="../../assets/css/style.css"></style>
 
-<script src="./InitialPage.js"></script>
+<script src="./ResultPage.js"></script>

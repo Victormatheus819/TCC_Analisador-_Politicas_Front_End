@@ -60,4 +60,4 @@
 
 <style src="../../assets/css/style.css"></style>
 
-<script src="./InitialPage.js"></script>
+<script src="./LoadingPage.js"></script>
