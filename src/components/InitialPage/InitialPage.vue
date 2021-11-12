@@ -10,7 +10,7 @@
             </span>
             <v-form ref="form" v-model="valid" lazy-validation>   
                 <v-col class="search-section">
-                    <input id="url" placeholder="Indique ou cole a URL da política aqui" />
+                    <input id="url" placeholder="Indique ou cole a URL da política aqui" autocomplete="off" />
                     <button class="btn-confirm" @click="validate()">ANALISAR</button>
                 </v-col>
             </v-form>
