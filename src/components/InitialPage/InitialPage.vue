@@ -27,11 +27,11 @@
                 </div>
                 <div>
                     <span class="dot-number">2</span>
-                    <span class="dot-text">Clique no botão analisar e é só esperar um pouquinho a análise acabar</span>
+                    <span class="dot-text">Clique no botão analisar e é espere um pouco a análise acabar</span>
                 </div>
                 <div>
                     <span class="dot-number">3</span>
-                    <span class="dot-text">Depois clique no botão ver Resultados e voilá, sua política estará analisada</span>
+                    <span class="dot-text">Depois clique em ver resultados e voi lá, análise pronta</span>
                 </div>
             </v-col>
         </v-row>
@@ -43,20 +43,20 @@
             <v-col class="steps">
                 <div>
                     <v-card color="divght_grey" class="box-text" elevation="18" shaped>
-                    <v-card-title class="text-h4">
+                    <v-card-title class="text-h4 orange-marker">
                         LGPD
                     </v-card-title>
-                    <v-card-subtitle class="text-body-1">
+                    <v-card-subtitle class="initial-card-subtitle">
                         divsten to your favorite artists and albums whenever and wherever, ondivne and offdivne.
                     </v-card-subtitle>
                 </v-card>
                 </div>
                 <div>
                     <v-card color="divght_grey" class="box-text" elevation="18" shaped>
-                    <v-card-title class="text-h4">
+                    <v-card-title class="text-h4 yellow-marker">
                         Sobre nós
                     </v-card-title>
-                    <v-card-subtitle class="text-body-1">
+                    <v-card-subtitle class="initial-card-subtitle">
                         Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF) 
                         Repositório referente a API que processa políticas de privacidade (tanto em PDF quanto em HTML) indicando a finadivdade, declarações  de dados coletados e se a política anadivsada é genérica.
                         Títdivo: Um anadivsador para a avadivação de políticas de privacidade de acordo com a LGPD para proteção aos dados pessoais

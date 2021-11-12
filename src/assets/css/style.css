@@ -41,7 +41,7 @@
   margin-block-end: 0.5em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-size: 22px;
+  font-size: 24px;
 }
 .search-section
 {
@@ -111,7 +111,6 @@
 }
 .steps div 
 {
-  display: table;
   width: 100%;
 }
 .steps div span 
@@ -140,10 +139,11 @@
 {
   text-align: left;
   padding: 6px;
+  font-weight: 500;
 }
 .box-text 
 {
-  height: 270px;
+  height: 350px;
   display: flex;
   text-align: left; 
 }
@@ -168,12 +168,19 @@
   font-size: 1.4em !important;
   font-weight: 600 !important;
 }
-.dados-marker
+.initial-card-subtitle
+{
+  text-align: left;
+  margin: 12px 0 5px 0 !important;
+  font-size: 1.1em !important;
+  font-weight: 500 !important;
+}
+.orange-marker
 {
   background-color: #ffc773;
   font-weight: 600 !important;
 }
-.finalidade-marker
+.yellow-marker
 {
   background-color: #f5f37e;
   font-weight: 600 !important;
@@ -191,7 +198,7 @@
   }
   .sp-text 
   {
-    font-size: 15px;
+    font-size: 20px;
   }
   .search-section input,
   .loading-input 
@@ -218,8 +225,12 @@
   {
     margin-top: 10px;
   }
-  .dados-marker,
-  .finalidade-marker
+  .box-text 
+  {
+    height: 450px;
+  }
+  .orange-marker,
+  .yellow-marker
   {
     font-weight: 550 !important;
   }
