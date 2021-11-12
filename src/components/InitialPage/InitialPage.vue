@@ -23,15 +23,15 @@
             <v-col class="steps">
                 <div>
                     <span class="dot-number">1</span>
-                    <span class="dot-text">Cole ou escreva a URL da política na barra indicada</span>
+                    <span class="dot-text">Cole ou escreva a URL da política de provacidade na barra indicada</span>
                 </div>
                 <div>
                     <span class="dot-number">2</span>
-                    <span class="dot-text">Clique no botão analisar e é espere um pouco a análise acabar</span>
+                    <span class="dot-text">Clique no botão analisar e espere um pouco a análise acabar</span>
                 </div>
                 <div>
                     <span class="dot-number">3</span>
-                    <span class="dot-text">Depois clique em ver resultados e voi lá, análise pronta</span>
+                    <span class="dot-text">Depois clique em ver resultados e aprensentará a análise</span>
                 </div>
             </v-col>
         </v-row>
