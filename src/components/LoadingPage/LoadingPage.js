@@ -10,7 +10,7 @@ export default {
 	data: () => ({
 		curiosidades: ["fato 1", "fato 2"],
 		increasing_pct: 0,
-		socket: {},
+		socket: undefined,
 		result: {}
 	}),
 	methods: {
@@ -22,16 +22,19 @@ export default {
 			await this.socket.on("connect", () => {
 
 			})
+			await this.socket.on("connect_error", (err) => {
+				console.log(`connect_error due to ${err.message}`);
+				//tratar erro de conexão
+			});
 			await this.socket.on("estconnect", () => {
 				this.processText();
-			})
+			});
 			await this.socket.on("mensagem", (data) => {
 				this.increasing_pct = data.data
-			})
+			});
 		},
 		processText() {
 			http.post("/api/process", { id: this.socket.id, url: this.url }).then(response => {
-				console.log(response.data)
 				this.result = response.data
 
 				this.socket = null;

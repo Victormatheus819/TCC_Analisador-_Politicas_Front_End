@@ -80,6 +80,11 @@
   transition: all .3s;
   margin-left: 10px;
 }
+.btn-confirm[disabled]
+{
+  background: #bdbdbd;
+  box-shadow: 0 4px 10px rgb(14 14 14 / 40%);
+}
 .btn-cancel 
 {
   background: #ffffff;

@@ -10,8 +10,8 @@
             </span>
             <v-form ref="form" v-model="valid" lazy-validation>   
                 <v-col class="search-section">
-                    <input id="url" placeholder="Indique ou cole a URL da política aqui" autocomplete="off" />
-                    <button class="btn-confirm" @click="validate()">ANALISAR</button>
+                    <input placeholder="Indique ou cole a URL da política aqui" autocomplete="off" v-model="url" />
+                    <button class="btn-confirm" @click="validate()" :disabled='this.url == "" || this.url == undefined'>ANALISAR</button>
                 </v-col>
             </v-form>
         </v-row>
