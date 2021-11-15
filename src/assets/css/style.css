@@ -25,6 +25,8 @@
 {
   font-weight: 600;
   margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: center;
 }
 .title-section-principal
 {
@@ -41,7 +43,11 @@
   margin-block-end: 0.5em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-size: 22px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgb(48, 48, 48);
+  text-align: center;
 }
 .search-section
 {
@@ -80,6 +86,11 @@
   transition: all .3s;
   margin-left: 10px;
 }
+.btn-confirm[disabled]
+{
+  background: #bdbdbd;
+  box-shadow: 0 4px 10px rgb(14 14 14 / 40%);
+}
 .btn-cancel 
 {
   background: #ffffff;
@@ -111,7 +122,6 @@
 }
 .steps div 
 {
-  display: table;
   width: 100%;
 }
 .steps div span 
@@ -140,10 +150,11 @@
 {
   text-align: left;
   padding: 6px;
+  font-weight: 500;
 }
 .box-text 
 {
-  height: 270px;
+  height: 350px;
   display: flex;
   text-align: left; 
 }
@@ -168,15 +179,45 @@
   font-size: 1.4em !important;
   font-weight: 600 !important;
 }
-.dados-marker
+.initial-card-subtitle
+{
+  text-align: left;
+  margin: 12px 0 5px 0 !important;
+  font-size: 1.1em !important;
+  font-weight: 500 !important;
+}
+.orange-marker
 {
   background-color: #ffc773;
   font-weight: 600 !important;
 }
-.finalidade-marker
+.yellow-marker
 {
   background-color: #f5f37e;
   font-weight: 600 !important;
+}
+.dialog-btn
+{
+  font-size: 1.3rem;
+  font-weight: 800;
+  width: 900px;
+  margin: 2em;
+  cursor: pointer;
+}
+.marked
+{
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 225, 0, 0.1),
+    rgba(255, 225, 0, 0.7) 4%,
+    rgba(255, 225, 0, 0.3)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 /**************************** PARA DISPOSITIVIOS MÓVEIS ****************************/
@@ -191,7 +232,7 @@
   }
   .sp-text 
   {
-    font-size: 15px;
+    font-size: 20px;
   }
   .search-section input,
   .loading-input 
@@ -218,10 +259,19 @@
   {
     margin-top: 10px;
   }
-  .dados-marker,
-  .finalidade-marker
+  .box-text 
+  {
+    height: 450px;
+  }
+  .orange-marker,
+  .yellow-marker
   {
     font-weight: 550 !important;
+  }
+  .v-card__actions
+  {
+    display: block !important;
+    padding: 15px !important;
   }
 
 }

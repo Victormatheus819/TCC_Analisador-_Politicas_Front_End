@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row class="section center-text">
-            <h1 class="title-section-principal">
+            <h1 class="title-section-principal marked">
                 Analisador de políticas de privacidade 
             </h1>
             <span class="sp-text">
@@ -18,7 +18,7 @@
             </span>
                 <div class="result-review">
                     <v-card color="divght_grey" elevation="18" shaped>
-                        <v-card-title class="text-h5 dados-marker">
+                        <v-card-title class="text-h5 orange-marker">
                             Sobre dados coletados:
                         </v-card-title>
                         <v-card-subtitle class="subtitle-result" id="dados_subtitle">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="result-review">
                     <v-card color="divght_grey" elevation="18" shaped>
-                        <v-card-title class="text-h5 finalidade-marker">
+                        <v-card-title class="text-h5 yellow-marker">
                             Sobre finalidade de tratamento:
                         </v-card-title>
                         <v-card-subtitle class="subtitle-result" id="finalidade_subtitle">

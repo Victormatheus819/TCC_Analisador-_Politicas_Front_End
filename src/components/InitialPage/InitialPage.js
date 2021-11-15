@@ -4,12 +4,14 @@ export default {
 	data: () => ({
 		flag: true,
 		valid: true,
-		url: ""
+		url: undefined
 	}),
 	methods: {
 		validate() {
 			if (this.$refs.form.validate()) {
-				this.url = document.getElementById("url").value;
+				if(this.url == "" || this.url == undefined){
+					return;
+				}
 				this.$router.push({ name: 'LoadingPage', params: { url: this.url } })
 			}
 		},
