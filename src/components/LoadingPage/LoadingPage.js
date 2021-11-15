@@ -62,6 +62,6 @@ export default {
 
 	},
 	async mounted() {
-		//this.$nextTick(await this.createSocket())
+		this.$nextTick(await this.createSocket())
 	}
 }
