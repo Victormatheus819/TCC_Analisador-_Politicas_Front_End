@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row class="section center-text">
-            <h1 class="title-section-principal">
+            <h1 class="title-section-principal marked">
                 Analisador de políticas de privacidade 
             </h1>
             <span class="sp-text">

@@ -5,7 +5,7 @@
       color="lighter_blue"
     
     >
-      <v-toolbar-title class="white--text title"  >Analisador de políticas de privacidade</v-toolbar-title>
+      <v-toolbar-title class="white--text title">Analisador de políticas de privacidade</v-toolbar-title>
     </v-app-bar>
 
     <v-main>

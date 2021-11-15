@@ -1,9 +1,7 @@
-import ProgressBar from 'vue-simple-progress'
 import io from 'socket.io-client';
 import http from '../config/Http'
 export default {
 	name: 'LoadingPage',
-	components: { ProgressBar },
 	props: {
 		url: { type: String, required: true }
 	},
@@ -11,11 +9,15 @@ export default {
 		curiosidades: ["fato 1", "fato 2"],
 		increasing_pct: 0,
 		socket: undefined,
-		result: {}
+		result: {},
+		isModalConfirmationVisible: false
 	}),
 	methods: {
-		redirect() {
-			this.$router.push({ name: 'ResultPage', params: { result: this.result } })
+		redirectResult() {
+			this.$router.push({ name: 'ResultPage', params: { result: this.result } });
+		},
+		redirectInitial() {
+			this.$router.push("/")
 		},
 		async createSocket() {
 			this.socket = io("http://127.0.0.1:8000/")
@@ -39,12 +41,27 @@ export default {
 
 				this.socket = null;
 			})
+		},
+		async cancel() {
+			try
+			{   
+				//acessar endpoint para cancelar análise
+				console.log("cancelada análise")
+			}
+			finally
+			{
+				//desconecar socket
+				console.log("socket desconectado")
+
+				this.isModalConfirmationVisible = false;
+
+				this.redirectInitial();
+			}
+			
 		}
 
 	},
 	async mounted() {
-		this.$nextTick(await this.createSocket())
-
-	},
-
+		//this.$nextTick(await this.createSocket())
+	}
 }

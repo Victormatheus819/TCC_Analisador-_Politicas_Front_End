@@ -2,11 +2,11 @@
     <v-container>
 
         <v-row class="section center-text">
-            <h1 class="title-section-principal">
+            <h1 class="title-section-principal marked">
                 Analisador de políticas de privacidade 
             </h1>
             <span class="sp-text">
-                Analise para mostrar a finalidade e dados coletados indicados pelas empresas
+                Analise para evidenciar a finalidade e dados coletados indicados pelas empresas
             </span>
             <v-form ref="form" v-model="valid" lazy-validation>   
                 <v-col class="search-section">

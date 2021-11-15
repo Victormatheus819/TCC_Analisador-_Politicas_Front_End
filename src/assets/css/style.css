@@ -25,6 +25,8 @@
 {
   font-weight: 600;
   margin-bottom: 15px;
+  line-height: 1.5;
+  text-align: center;
 }
 .title-section-principal
 {
@@ -42,6 +44,10 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgb(48, 48, 48);
+  text-align: center;
 }
 .search-section
 {
@@ -190,6 +196,29 @@
   background-color: #f5f37e;
   font-weight: 600 !important;
 }
+.dialog-btn
+{
+  font-size: 1.3rem;
+  font-weight: 800;
+  width: 900px;
+  margin: 2em;
+  cursor: pointer;
+}
+.marked
+{
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 225, 0, 0.1),
+    rgba(255, 225, 0, 0.7) 4%,
+    rgba(255, 225, 0, 0.3)
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 
 /**************************** PARA DISPOSITIVIOS MÓVEIS ****************************/
 @media only screen and (max-width: 640px) {
@@ -238,6 +267,11 @@
   .yellow-marker
   {
     font-weight: 550 !important;
+  }
+  .v-card__actions
+  {
+    display: block !important;
+    padding: 15px !important;
   }
 
 }
