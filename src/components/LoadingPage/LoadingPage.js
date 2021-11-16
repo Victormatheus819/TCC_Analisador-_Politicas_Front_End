@@ -21,22 +21,27 @@ export default {
 			this.$router.push("/")
 		},
 		async createSocket() {
-			this.socket = io("http://127.0.0.1:8000/")
-			await this.socket.on("connect", () => {
-
+			this.socket = await io("https://tcc-analise-poli-priv.herokuapp.com/")
+			this.socket.on("connect", () => {
+                this.socket.on("connect_error", (err) => {
+					console.log(`connect_error due to ${err.message}`);
+					//tratar erro de conexão
+				});
+				this.socket.on("estconnect", () => {
+					console.log("process is begining")
+					this.connected = true
+					this.processText();
+				});
+				this.socket.on("mensagem", (data) => {
+					this.increasing_pct = data.data
+				});
+				this.socket.on("disconnect", () => {
+					console.log("desconnected")
+			});
+				
 			})
-			await this.socket.on("connect_error", (err) => {
-				console.log(`connect_error due to ${err.message}`);
-				//tratar erro de conexão
-			});
-			await this.socket.on("estconnect", () => {
-				this.connected = true
-				this.processText();
-			});
-			await this.socket.on("mensagem", (data) => {
-				this.increasing_pct = data.data
-			});
-		},
+			
+	},
 		processText() {
 			http.post("/api/process", { id: this.socket.id, url: this.url }).then(response => {
 				this.result = response.data
