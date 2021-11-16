@@ -8,12 +8,11 @@
             <span class="sp-text">
                 Analise para evidenciar a finalidade e dados coletados indicados pelas empresas
             </span>
-            <v-form ref="form" v-model="valid" lazy-validation>   
+                <p id="alerText" v-if="alert==true" class="text-alert" >Por favor insira uma url válida Ex: http://seusite.com</p>  
                 <v-col class="search-section">
                     <input placeholder="Indique ou cole a URL da política aqui" autocomplete="off" v-model="url" />
                     <button class="btn-confirm" @click="validate()" :disabled='this.url == "" || this.url == undefined'>ANALISAR</button>
                 </v-col>
-            </v-form>
         </v-row>
 
         <v-row class="section center-text">

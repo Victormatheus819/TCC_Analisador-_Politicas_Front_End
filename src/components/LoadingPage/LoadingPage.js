@@ -10,7 +10,8 @@ export default {
 		increasing_pct: 0,
 		socket: undefined,
 		result: {},
-		isModalConfirmationVisible: false
+		isModalConfirmationVisible: false,
+		connected:false		
 	}),
 	methods: {
 		redirectResult() {
@@ -29,6 +30,7 @@ export default {
 				//tratar erro de conexão
 			});
 			await this.socket.on("estconnect", () => {
+				this.connected = true
 				this.processText();
 			});
 			await this.socket.on("mensagem", (data) => {

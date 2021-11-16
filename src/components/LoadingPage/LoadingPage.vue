@@ -10,8 +10,8 @@
 			</span>
 
 			<v-col class="search-section">
-
-				<v-progress-linear color="light-blue" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
+                <div v-if="connected==false" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+				<v-progress-linear v-else color="light-blue" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
 					<strong class="loading-text">
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
