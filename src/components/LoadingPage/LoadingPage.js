@@ -18,18 +18,23 @@ export default {
 			this.browserEvent = false;
 			this.$router.push({ name: 'ResultPage', params: { result: this.result } });
 		},
-		redirectInitial() {
+		redirectInitial(error) {
 			this.browserEvent = false;
-			this.$router.push("/")
+			if(error){
+				this.$router.push({ name: 'InitialPage', params: { errorConnect: true, urlProps: this.url } });
+			}else{
+				this.$router.push("/");
+			}
 		},
 		async createSocket() {
-			this.socket = io("http://127.0.0.1:8000/")
-			await this.socket.on("connect", () => {
 
-			})
-			await this.socket.on("connect_error", (err) => {
-				console.log(`connect_error due to ${err.message}`);
-				//tratar erro de conexão
+			this.socket = io("http://127.0.0.1:8000/")
+			
+			await this.socket.on("connect", () => {});
+			
+			await this.socket.on("connect_error", () => {
+				this.socket.disconnect();
+				this.redirectInitial(true);
 			});
 			await this.socket.on("estconnect", () => {
 				this.processText();
@@ -58,7 +63,7 @@ export default {
 
 				this.isModalConfirmationVisible = false;
 
-				this.redirectInitial();
+				this.redirectInitial(false);
 			}
 			
 		}
@@ -67,7 +72,7 @@ export default {
 	async mounted() {
 
 		if(!this.url){
-			this.redirectInitial();
+			this.redirectInitial(false);
 		}
 
 		this.$nextTick(async function(){

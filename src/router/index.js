@@ -9,7 +9,8 @@ const routes = [
   {
     path: '/',
     name: 'InitialPage',
-    component: InitialPage
+    component: InitialPage,
+    props: true
   },
   {
     path: '/loading-page',

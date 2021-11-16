@@ -68,7 +68,7 @@
 					<button class="btn-cancel dialog-btn" @click.stop="isModalConfirmationVisible = false">NÃO</button>
 				</v-card-actions>
 			</v-card>
-	</v-dialog>
+		</v-dialog>
 
 	</v-container>
 </template>
