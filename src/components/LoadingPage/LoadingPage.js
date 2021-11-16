@@ -65,9 +65,18 @@ export default {
 
 	},
 	async mounted() {
+
+		if(!this.url){
+			this.redirectInitial();
+		}
+
 		this.$nextTick(async function(){
 			await this.createSocket();
 		});
+
+		window.onbeforeunload = function(){
+			return '';
+		}
 	},
 	beforeRouteLeave(to, from, next) {
 		if(this.browserEvent){
