@@ -10,13 +10,16 @@ export default {
 		increasing_pct: 0,
 		socket: undefined,
 		result: {},
-		isModalConfirmationVisible: false
+		isModalConfirmationVisible: false,
+		browserEvent: true
 	}),
 	methods: {
 		redirectResult() {
+			this.browserEvent = false;
 			this.$router.push({ name: 'ResultPage', params: { result: this.result } });
 		},
 		redirectInitial() {
+			this.browserEvent = false;
 			this.$router.push("/")
 		},
 		async createSocket() {
@@ -62,6 +65,28 @@ export default {
 
 	},
 	async mounted() {
-		this.$nextTick(await this.createSocket())
+		this.$nextTick(async function(){
+			//await this.createSocket();
+
+			//window.addEventListener('beforeunload', (event) => {
+
+				
+
+				//event.preventDefault
+				//event.returnValue = '';
+				
+			//});
+		});
+	},
+	beforeRouteLeave(to, from, next) {
+		if(this.browserEvent)
+		{
+			next(false);
+			this.isModalConfirmationVisible = true;
+		}else
+		{
+			next();
+		}
+			
 	}
 }
