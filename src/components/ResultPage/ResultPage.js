@@ -4,10 +4,12 @@ export default {
 	props: { result: { type: Object, required: true } },
 	data: () => ({
 		texto_finalidade: "finalidade",
-		texto_dados: "coleta dados"
+		texto_dados: "coleta dados",
+		browserEvent: true
 	}),
 	methods: {
 		redirect() {
+			this.browserEvent = false;
 			this.$router.push("/")
 		}
 	},
@@ -21,5 +23,12 @@ export default {
 		}
 		document.getElementById("dados_subtitle").innerHTML = this.result.coleta
 		document.getElementById("finalidade_subtitle").innerHTML = this.result.finalidade
+	},
+	beforeRouteLeave(to, from, next) {
+		if(this.browserEvent){
+			next(false);
+		}else{
+			next();
+		}
 	}
 }

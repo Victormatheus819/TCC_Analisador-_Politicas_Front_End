@@ -66,27 +66,15 @@ export default {
 	},
 	async mounted() {
 		this.$nextTick(async function(){
-			//await this.createSocket();
-
-			//window.addEventListener('beforeunload', (event) => {
-
-				
-
-				//event.preventDefault
-				//event.returnValue = '';
-				
-			//});
+			await this.createSocket();
 		});
 	},
 	beforeRouteLeave(to, from, next) {
-		if(this.browserEvent)
-		{
+		if(this.browserEvent){
 			next(false);
 			this.isModalConfirmationVisible = true;
-		}else
-		{
+		}else{
 			next();
 		}
-			
 	}
 }
