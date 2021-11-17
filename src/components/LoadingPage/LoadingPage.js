@@ -33,8 +33,8 @@ export default {
 			await this.socket.on("connect", () => {});
 			
 			await this.socket.on("connect_error", () => {
-				this.socket.disconnect();
-				this.redirectInitial(true);
+				//this.socket.disconnect();
+				//this.redirectInitial(true);
 			});
 			await this.socket.on("estconnect", () => {
 				this.processText();
