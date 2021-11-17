@@ -6,7 +6,7 @@ export default {
 		url: { type: String, required: true }
 	},
 	data: () => ({
-		curiosidades: ["fato 1", "fato 2"],
+		curiosidades: ["Lembre-se é sempre importante ler as politicas de privacidade de qualquer serviço contratado", "fato 2","Nunca tente pedir um café para a aplicação ele pode ficar nervosa"],
 		increasing_pct: 0,
 		socket: undefined,
 		result: {},
@@ -21,10 +21,10 @@ export default {
 			this.$router.push("/")
 		},
 		async createSocket() {
-			this.socket = await io("https://tcc-analise-poli-priv.herokuapp.com/")
+			this.socket = await io("https://tcc-analise-poli-priv.herokuapp.com:443");
 			this.socket.on("connect", () => {
                 this.socket.on("connect_error", (err) => {
-					console.log(`connect_error due to ${err.message}`);
+					console.log(`connect_error due to ${err.message}`)
 					//tratar erro de conexão
 				});
 				this.socket.on("estconnect", () => {
