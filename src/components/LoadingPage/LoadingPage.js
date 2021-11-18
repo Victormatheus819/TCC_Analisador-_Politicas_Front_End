@@ -21,7 +21,7 @@ export default {
 			this.$router.push("/")
 		},
 		async createSocket() {
-			this.socket = await io("https://tcc-analise-poli-priv.herokuapp.com:443");
+			this.socket = await io("https://tcc-analise-poli-priv.herokuapp.com");
 			this.socket.on("connect", () => {
                 this.socket.on("connect_error", (err) => {
 					console.log(`connect_error due to ${err.message}`)
