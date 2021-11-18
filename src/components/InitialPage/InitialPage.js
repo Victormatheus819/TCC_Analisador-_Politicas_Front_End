@@ -8,15 +8,23 @@ export default {
 		flag: true,
 		valid: true,
 		url: undefined,
+		alert: false,
 		isModalVisible: false
 	}),
 	methods: {
 		validate() {
-			if (this.$refs.form.validate()) {
-				if(this.url == "" || this.url == undefined){
-					return;
-				}
-				this.$router.push({ name: 'LoadingPage', params: { url: this.url } })
+            var isUrl = null
+			try {
+				var url = new URL(this.url);
+			} catch (_) {
+				this.alert = true;
+				
+			}
+			console.log(isUrl)
+			if ((this.url == "" || this.url == undefined) || isUrl == null) {
+				this.alert = true;
+			} else {
+				this.$router.push({ name: 'LoadingPage', params: { url: url } })
 			}
 		},
 		cancel(){
