@@ -32,12 +32,20 @@ export default {
 
 			let self = this;
 
+			if(!this.id)
+			{
+				return;
+			}
+
 			this.socket = new WebSocket('ws:/127.0.0.1:8000/ws/some_url/');
+
+			this.socket.onerror = function(){
+				self.socket.close();
+				self.redirectInitial(true);
+			}
 
 			this.socket.onmessage = function(e){
 				let data = JSON.parse(e.data);
-
-				console.log(data)
 
 				switch (data.message) {
 					case 'Pode iniciar processamento':
@@ -46,16 +54,17 @@ export default {
 						self.processText();
 						break;
 					case 'Atualização do processamento':
+						console.log(data)
 						self.increasing_pct = data.value;
-						console.log('att: ' + data)
 				}
-				
 			}		
 		},
 		processText() {
 			console.log("process call")
 			http.post("/api/process", { id: this.id, url: this.url }).then(response => {
-				this.result = response.data
+				this.result = response.data;
+				this.increasing_pct = 100;
+				this.socket.close();
 			})
 		},
 		async cancel() {
