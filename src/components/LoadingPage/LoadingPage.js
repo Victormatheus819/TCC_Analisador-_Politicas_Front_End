@@ -6,12 +6,17 @@ export default {
 		url: { type: String, required: true }
 	},
 	data: () => ({
-		curiosidades: ["Lembre-se é sempre importante ler as politicas de privacidade de qualquer serviço contratado", "fato 2","Nunca tente pedir um café para a aplicação ele pode ficar nervosa"],
+		curiosidades: ["Lembre-se é sempre importante ler as politicas de privacidade de qualquer serviço contratado",
+		"Dados criados nos sites de empresas, como login e senha, também são consideradas dados pessoais e estão sob a jurisdição da LGPD",
+		"Os dados continuam com a mesma proteção, mesmo após  dissolução da empresa",
+		"Nunca tente pedir um café para a aplicação ele pode ficar nervosa"],
 		increasing_pct: 0,
 		socket: undefined,
 		result: {},
 		isModalConfirmationVisible: false,
-		connected:false		
+		processError:false,
+		connected:false, 
+		processid:""		
 	}),
 	methods: {
 		redirectResult() {
@@ -21,7 +26,7 @@ export default {
 			this.$router.push("/")
 		},
 		async createSocket() {
-			this.socket = await io("https://tcc-analise-poli-priv.herokuapp.com");
+			this.socket = await io("http://127.0.0.1:8000/");
 			this.socket.on("connect", () => {
                 this.socket.on("connect_error", (err) => {
 					console.log(`connect_error due to ${err.message}`)
@@ -44,15 +49,20 @@ export default {
 	},
 		processText() {
 			http.post("/api/process", { id: this.socket.id, url: this.url }).then(response => {
-				this.result = response.data
-
-				this.socket = null;
-			})
+					this.result = response.data
+					this.socket = null;
+	
+				}
+				
+				
+			).catch(error=>{
+				console.log(error)
+				this.processError=true})
 		},
 		async cancel() {
 			try
 			{   
-				//acessar endpoint para cancelar análise
+				http.post("/api/cancel", { id: this.socket.id, url: this.url }).then(response=>{console.log(response)})
 				console.log("cancelada análise")
 			}
 			finally
@@ -65,10 +75,19 @@ export default {
 				this.redirectInitial();
 			}
 			
+		},
+
+		async createId(){
+			http.post('socket/manual-inclusion').then(response =>{
+				
+				this.processid = response.data.id
+			})
 		}
 
 	},
 	async mounted() {
+		// await this.createId()
+		// await this.pr
 		this.$nextTick(await this.createSocket())
 	}
 }
