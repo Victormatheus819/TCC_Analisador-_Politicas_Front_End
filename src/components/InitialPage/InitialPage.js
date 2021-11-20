@@ -15,11 +15,13 @@ export default {
 		validate() {
             var isUrl = null
 			try {
-				isUrl = new URL(this.url);
-			} catch (_) {
+				new URL(this.url);
+				isUrl = true
+			} catch (e) {
 				this.alert = true;
-				isUrl = null
+				console.log(e)
 			}
+			
 			if ((this.url == "" || this.url == undefined) || isUrl == null) {
 				this.alert = true;
 			} else {
