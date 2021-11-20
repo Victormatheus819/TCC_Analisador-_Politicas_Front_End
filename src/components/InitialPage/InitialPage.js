@@ -1,28 +1,41 @@
-
 export default {
-	name: 'InicialPage',
+	name: 'InitialPage',
+	props: {
+		errorConnect: { type: Boolean, required: false },
+		urlProps: { type: String, required: false }
+	},
 	data: () => ({
 		flag: true,
 		valid: true,
 		url: undefined,
-		alert: false
+		alert: false,
+		isModalVisible: false
 	}),
 	methods: {
 		validate() {
             var isUrl = null
 			try {
-				var url = new URL(this.url);
-			} catch (_) {
+				new URL(this.url);
+				isUrl = true
+			} catch (e) {
 				this.alert = true;
-				
+				console.log(e)
 			}
-			console.log(isUrl)
+			
 			if ((this.url == "" || this.url == undefined) || isUrl == null) {
 				this.alert = true;
 			} else {
-				this.$router.push({ name: 'LoadingPage', params: { url: url } })
+				this.$router.push({ name: 'LoadingPage', params: { url: this.url } })
 			}
 		},
-
+		cancel(){
+			this.isModalVisible = false;
+		}
+	},
+	mounted(){
+		if(this.errorConnect){
+			this.url = this.urlProps;
+			this.isModalVisible = true;
+		}
 	}
 }

@@ -66,9 +66,23 @@
         </v-row>
 
 
-        <v-row>
-            
-        </v-row>
+        <v-dialog
+			v-model="isModalVisible"
+			transition="dialog-top-transition"
+			max-width="600"
+		>
+			<v-card>
+				<v-toolbar color="primary" dark class="title-section-secondary">
+					Erro conexão
+				</v-toolbar>
+				<v-card-text>
+					<div class="sp-text justify-center">Erro de conexão! Tente novamente mais tarde.</div>
+				</v-card-text>
+				<v-card-actions>
+					<button class="btn-confirm dialog-btn" @click="cancel()">OK</button>
+				</v-card-actions>
+			</v-card>
+		</v-dialog>
 
     </v-container>
 </template>

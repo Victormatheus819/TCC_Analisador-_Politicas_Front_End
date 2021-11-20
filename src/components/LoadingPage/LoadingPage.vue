@@ -51,6 +51,7 @@
 		
 		</v-row>
 
+	<!-- MODAL CANCELAMENTO DE PROCESSAMENTO -->
 		<v-dialog
 			v-model="isModalConfirmationVisible"
 			transition="dialog-top-transition"
@@ -68,7 +69,27 @@
 					<button class="btn-cancel dialog-btn" @click.stop="isModalConfirmationVisible = false">NÃO</button>
 				</v-card-actions>
 			</v-card>
-	</v-dialog>
+		</v-dialog>
+
+		<!-- MODAL ERRO -->
+		<v-dialog
+				v-model="processError"
+				transition="dialog-top-transition"
+				max-width="600"
+			>
+				<v-card>
+					<v-toolbar color="primary" dark class="title-section-secondary">
+						Erro no processamento
+					</v-toolbar>
+					<v-card-text>
+						<div class="sp-text justify-center">Ocorreu um erro no processamento do texto!</div>
+						<div class="sp-text justify-center">Por favor, volte a página inicial!</div>
+					</v-card-text>
+					<v-card-actions>
+						<button class="btn-confirm dialog-btn" @click="redirectInitial()">Voltar</button>
+					</v-card-actions>
+				</v-card>
+		</v-dialog>
 
 	</v-container>
 </template>
