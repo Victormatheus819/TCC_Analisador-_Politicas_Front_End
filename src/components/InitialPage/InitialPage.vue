@@ -22,7 +22,7 @@
             <v-col class="steps">
                 <div>
                     <span class="dot-number">1</span>
-                    <span class="dot-text">Cole ou escreva a URL da política de provacidade na barra indicada</span>
+                    <span class="dot-text">Indique URL da política de privacidade desejada na barra indicada</span>
                 </div>
                 <div>
                     <span class="dot-number">2</span>
@@ -30,7 +30,7 @@
                 </div>
                 <div>
                     <span class="dot-number">3</span>
-                    <span class="dot-text">Depois clique em ver resultados e aprensentará a análise</span>
+                    <span class="dot-text">Depois clique em ver resultados e a análise será apresentada</span>
                 </div>
             </v-col>
         </v-row>
@@ -56,9 +56,9 @@
                         Sobre nós
                     </v-card-title>
                     <v-card-subtitle class="initial-card-subtitle">
-                        Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF) 
-                        Repositório referente a API que processa políticas de privacidade (tanto em PDF quanto em HTML) indicando a finadivdade, declarações  de dados coletados e se a política anadivsada é genérica.
-                        Títdivo: Um anadivsador para a avadivação de políticas de privacidade de acordo com a LGPD para proteção aos dados pessoais
+                        <p>Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF)</p>
+                        <p>Realisado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho</p>
+                        <p>Intuito</p>
                     </v-card-subtitle>
                 </v-card>
                 </div>
@@ -75,11 +75,11 @@
 				<v-toolbar color="primary" dark class="title-section-secondary">
 					Erro conexão
 				</v-toolbar>
-				<v-card-text>
-					<div class="sp-text justify-center">Erro de conexão! Tente novamente mais tarde.</div>
+				<v-card-text class='card-text'>
+					<div class="sp-text justify-center dialog-text-end">Erro de conexão! Tente novamente mais tarde.</div>
 				</v-card-text>
 				<v-card-actions>
-					<button class="btn-confirm dialog-btn" @click="cancel()">OK</button>
+					<button class="btn-confirm dialog-btn one-btn" @click="cancel()">OK</button>
 				</v-card-actions>
 			</v-card>
 		</v-dialog>

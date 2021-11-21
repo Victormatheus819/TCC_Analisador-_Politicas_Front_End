@@ -27,7 +27,7 @@ export default {
 			this.browserEvent = false;
 			if(error)
 			{
-				this.$router.push({ name: 'InitialPage', params: { errorConnect: true, urlProps: this.url } });
+				this.$router.push({ name: 'InitialPage', params: { errorConnect: !this.processError, urlProps: this.url } });
 			}
 			else
 			{
@@ -38,7 +38,7 @@ export default {
 
 			let self = this;
 
-			if(!this.id || !this.url)
+			if(!this.url)
 			{
 				return;
 			}
@@ -71,6 +71,7 @@ export default {
 				response => {
 					this.result = response.data;
 					this.increasing_pct = 100;
+					this.url = undefined;
 					if(this.socket != undefined)
 					{
 						this.socket.close();
@@ -126,6 +127,12 @@ export default {
 		else
 		{
 			next();
+		}
+	},
+	beforeDestroy() {
+		if(this.socket != undefined)
+		{
+			this.socket.close();
 		}
 	}
 }

@@ -62,7 +62,7 @@
 					Cancelar análise
 				</v-toolbar>
 				<v-card-text>
-					<div class="sp-text justify-center">Deseja realmente cancelar a análise da política de privacidade?</div>
+					<div class="sp-text justify-center dialog-text-end">Deseja realmente cancelar a análise da política de privacidade?</div>
 				</v-card-text>
 				<v-card-actions>
 					<button class="btn-confirm dialog-btn" @click="cancel()">SIM</button>
@@ -83,10 +83,10 @@
 					</v-toolbar>
 					<v-card-text>
 						<div class="sp-text justify-center">Ocorreu um erro no processamento do texto!</div>
-						<div class="sp-text justify-center">Por favor, volte a página inicial!</div>
+						<div class="sp-text justify-center dialog-text-end">Por favor, volte a página inicial!</div>
 					</v-card-text>
 					<v-card-actions>
-						<button class="btn-confirm dialog-btn" @click="redirectInitial()">Voltar</button>
+						<button class="btn-confirm dialog-btn one-btn" @click="redirectInitial(true)">Voltar</button>
 					</v-card-actions>
 				</v-card>
 		</v-dialog>
