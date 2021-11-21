@@ -1,31 +1,32 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="lighter_blue"
-    
-    >
-      <v-toolbar-title class="white--text" style="font-size:28px" >Analisador de políticas de privacidade</v-toolbar-title>
+    <v-app>
+        <v-app-bar
+        app
+        color="dark_blue"
+        >
+        <v-toolbar-title class="white--text title">Segurindo analisador</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
-      <InicialPage/>
+      <router-view></router-view>
+      
     </v-main>
-  </v-app>
+    
+    <VLibras />
+    
+    </v-app>
 </template>
 
 <script>
-import InicialPage from './components/InitialPage/InitialPage';
-
+import { VLibras } from '@vue-a11y/vlibras'
 export default {
-  name: 'App',
-
-  components: {
-    InicialPage,
-  },
-
-  data: () => ({
+    name: 'App',
+    components:{VLibras},
+    data: () => ({
     //
-  }),
+    }),
+    mounted(){
+        console.log("There is a cofee is waiting for you")
+    },
 };
 </script>

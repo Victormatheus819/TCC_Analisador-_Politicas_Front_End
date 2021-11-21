@@ -1,76 +1,92 @@
 <template>
     <v-container>
-        <v-row justify="center">
-            <p>resumo</p>
-        </v-row>   
-        <v-row justify="center">
-            <v-col cols="3" lg="5" md="7">
-                <v-text-field  label="Cole sua Url" solo></v-text-field> 
-            </v-col>
-            <v-col cols="3"  lg="3" md="7" >
-                    <v-btn elevation="2" color="swamp_green" class="white--text" large> 
-                    Analisar
-                    </v-btn>
+
+        <v-row class="section center-text">
+            <h1 class="title-section-principal marked">
+                Analisador de políticas de privacidade 
+            </h1>
+            <span class="sp-text">
+                Analise para evidenciar a finalidade e dados coletados indicados pelas empresas
+            </span>
+                <p id="alerText" v-if="alert==true" class="text-alert" >Por favor insira uma url válida Ex: http://seusite.com</p>  
+                <v-col class="search-section">
+                    <input placeholder="Indique ou cole a URL da política aqui" autocomplete="off" v-model="url" />
+                    <button class="btn-confirm" @click="validate()" :disabled='this.url == "" || this.url == undefined'>ANALISAR</button>
+                </v-col>
+        </v-row>
+
+        <v-row class="section center-text">
+            <h1 class="title-section-secondary">
+                Como usar?
+            </h1>
+            <v-col class="steps">
+                <div>
+                    <span class="dot-number">1</span>
+                    <span class="dot-text">Indique URL da política de privacidade desejada na barra indicada</span>
+                </div>
+                <div>
+                    <span class="dot-number">2</span>
+                    <span class="dot-text">Clique no botão analisar e espere um pouco a análise acabar</span>
+                </div>
+                <div>
+                    <span class="dot-number">3</span>
+                    <span class="dot-text">Depois clique em ver resultados e a análise será apresentada</span>
+                </div>
             </v-col>
         </v-row>
-  </v-container>
+
+        <v-row class="section center-text">
+            <h1 class="title-section-secondary">
+                Saiba mais...
+            </h1>
+            <v-col class="steps">
+                <div>
+                    <v-card color="divght_grey" class="box-text" elevation="18" shaped>
+                    <v-card-title class="text-h4 orange-marker">
+                        LGPD
+                    </v-card-title>
+                    <v-card-subtitle class="initial-card-subtitle">
+                        divsten to your favorite artists and albums whenever and wherever, ondivne and offdivne.
+                    </v-card-subtitle>
+                </v-card>
+                </div>
+                <div>
+                    <v-card color="divght_grey" class="box-text" elevation="18" shaped>
+                    <v-card-title class="text-h4 yellow-marker">
+                        Sobre nós
+                    </v-card-title>
+                    <v-card-subtitle class="initial-card-subtitle">
+                        <p>Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF)</p>
+                        <p>Realisado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho</p>
+                        <p>Intuito</p>
+                    </v-card-subtitle>
+                </v-card>
+                </div>
+            </v-col>
+        </v-row>
+
+
+        <v-dialog
+			v-model="isModalVisible"
+			transition="dialog-top-transition"
+			max-width="600"
+		>
+			<v-card>
+				<v-toolbar color="primary" dark class="title-section-secondary">
+					Erro conexão
+				</v-toolbar>
+				<v-card-text class='card-text'>
+					<div class="sp-text justify-center dialog-text-end">Erro de conexão! Tente novamente mais tarde.</div>
+				</v-card-text>
+				<v-card-actions>
+					<button class="btn-confirm dialog-btn one-btn" @click="cancel()">OK</button>
+				</v-card-actions>
+			</v-card>
+		</v-dialog>
+
+    </v-container>
 </template>
 
-<script>
-  export default {
-    name: 'InicialPage',
+<style src="../../assets/css/style.css"></style>
 
-    data: () => ({
-      ecosystem: [
-        {
-          text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
-        },
-        {
-          text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
-        },
-        {
-          text: 'awesome-vuetify',
-          href: 'https://github.com/vuetifyjs/awesome-vuetify',
-        },
-      ],
-      importantLinks: [
-        {
-          text: 'Documentation',
-          href: 'https://vuetifyjs.com',
-        },
-        {
-          text: 'Chat',
-          href: 'https://community.vuetifyjs.com',
-        },
-        {
-          text: 'Made with Vuetify',
-          href: 'https://madewithvuejs.com/vuetify',
-        },
-        {
-          text: 'Twitter',
-          href: 'https://twitter.com/vuetifyjs',
-        },
-        {
-          text: 'Articles',
-          href: 'https://medium.com/vuetify',
-        },
-      ],
-      whatsNext: [
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer',
-        },
-        {
-          text: 'Select a layout',
-          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
-        },
-        {
-          text: 'Frequently Asked Questions',
-          href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
-        },
-      ],
-    }),
-  }
-</script>
+<script src="./InitialPage.js"></script>
