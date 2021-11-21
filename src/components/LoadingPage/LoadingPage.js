@@ -38,7 +38,7 @@ export default {
 
 			let self = this;
 
-			if(!this.id || !this.url)
+			if(!this.url)
 			{
 				return;
 			}
@@ -48,7 +48,7 @@ export default {
 			this.socket.onerror = function()
 			{
 				self.socket.close();
-				self.redirectInitial(true);
+				self.processError = true;
 			}
 
 			this.socket.onmessage = function(e)
@@ -71,6 +71,7 @@ export default {
 				response => {
 					this.result = response.data;
 					this.increasing_pct = 100;
+					this.url = undefined;
 					if(this.socket != undefined)
 					{
 						this.socket.close();
@@ -126,6 +127,12 @@ export default {
 		else
 		{
 			next();
+		}
+	},
+	beforeDestroy() {
+		if(this.socket != undefined)
+		{
+			this.socket.close();
 		}
 	}
 }

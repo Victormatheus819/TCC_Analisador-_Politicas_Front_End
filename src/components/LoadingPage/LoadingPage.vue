@@ -86,7 +86,7 @@
 						<div class="sp-text justify-center">Por favor, volte a página inicial!</div>
 					</v-card-text>
 					<v-card-actions>
-						<button class="btn-confirm dialog-btn" @click="redirectInitial()">Voltar</button>
+						<button class="btn-confirm dialog-btn" @click="redirectInitial(true)">Voltar</button>
 					</v-card-actions>
 				</v-card>
 		</v-dialog>
