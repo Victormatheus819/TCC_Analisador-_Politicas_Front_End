@@ -14,17 +14,23 @@ export default {
 	methods: {
 		validate() {
             var isUrl = null
-			try {
+			try 
+			{
 				new URL(this.url);
 				isUrl = true
-			} catch (e) {
+			} 
+			catch (e) 
+			{
 				this.alert = true;
 				console.log(e)
 			}
 			
-			if ((this.url == "" || this.url == undefined) || isUrl == null) {
+			if ((this.url == "" || this.url == undefined) || isUrl == null) 
+			{
 				this.alert = true;
-			} else {
+			} 
+			else 
+			{
 				this.$router.push({ name: 'LoadingPage', params: { url: this.url } })
 			}
 		},
@@ -33,7 +39,8 @@ export default {
 		}
 	},
 	mounted(){
-		if(this.errorConnect){
+		if(this.errorConnect)
+		{
 			this.url = this.urlProps;
 			this.isModalVisible = true;
 		}

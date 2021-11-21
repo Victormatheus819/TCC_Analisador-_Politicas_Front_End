@@ -219,22 +219,22 @@
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-.text-alert{
+.text-alert
+{
   font-size: 18px;
   color:#ff0000;
   font-weight: bold;
 }
 
-/*** begin loading ***/
+/*************** LOADING SPINNER ***************/
 
 .lds-spinner {
   color: #000;
-  display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
-  margin-left: 800px;
-  margin-bottom: 20px;
+  margin: auto;
+  margin-bottom: 30px !important;
 }
 .lds-spinner div {
   transform-origin: 40px 40px;
@@ -307,8 +307,6 @@
     opacity: 0;
   }
 }
- /*** end loading ***/
-
 
 /**************************** PARA DISPOSITIVIOS MÓVEIS ****************************/
 @media only screen and (max-width: 640px) {

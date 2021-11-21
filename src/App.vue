@@ -2,10 +2,9 @@
   <v-app>
     <v-app-bar
       app
-      color="lighter_blue"
-    
+      color="dark_blue"
     >
-      <v-toolbar-title class="white--text title">Analisador de políticas de privacidade</v-toolbar-title>
+      <v-toolbar-title class="white--text title">Segurindo analisador</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
