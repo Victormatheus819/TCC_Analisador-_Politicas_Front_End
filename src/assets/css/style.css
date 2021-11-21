@@ -1,3 +1,4 @@
+/* seções  principais */
 .container
 {
   max-width: 96%;
@@ -43,12 +44,14 @@
   margin-block-end: 0.5em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-size: 24px;
+  font-size: 27px;
   font-weight: 500;
   line-height: 1.5;
   color: rgb(48, 48, 48);
   text-align: center;
 }
+
+/* seção de busca */
 .search-section
 {
   margin: 20px 0 20px;
@@ -64,10 +67,12 @@
   -webkit-border-radius: 12px;
   -khtml-border-radius: 12px;
   border-radius: 12px;
-  height: 56px;
+  height: 60px;
   padding: 17px 20px;
-  font-size: 0.95em;
+  font-size: 1.2em;
 }
+
+/* botões */
 .btn-confirm 
 {
   background: #6aa84f;
@@ -108,6 +113,20 @@
   transition: all .3s;
   margin-left: 10px;
 }
+.dialog-btn
+{
+  font-size: 1.3rem;
+  font-weight: 800;
+  width: 900px;
+  margin: 0.5em;
+  cursor: pointer;
+}
+.one-btn
+{
+  margin-left: 50% !important;
+}
+
+/* seção de lista */
 .container div .steps 
 {
   display: flex;
@@ -133,8 +152,8 @@
 {
   font-weight: 600;
   font-size: 45px;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   line-height: 80px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -149,24 +168,17 @@
 .dot-text
 {
   text-align: left;
-  padding: 6px;
+  padding: 4px;
   font-weight: 500;
+  font-size: 1.2em;
 }
+
+/* card de informações */
 .box-text 
 {
   height: 350px;
   display: flex;
   text-align: left; 
-}
-.loading-text 
-{
-  font-size: 2.25em;
-}
-.item-center
-{
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
 }
 .result-review
 {
@@ -196,14 +208,26 @@
   background-color: #f5f37e;
   font-weight: 600 !important;
 }
-.dialog-btn
+.initial-card-subtitle p
 {
-  font-size: 1.3rem;
-  font-weight: 800;
-  width: 900px;
-  margin: 2em;
-  cursor: pointer;
+  font-size: 1.1em;
+  text-align: center;
 }
+
+/* carrossel */
+.item-center
+{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+/* pop up */
+.v-dialog > .v-card > .v-card__text {
+  padding: 10px 24px 0px !important;
+}
+
+/* destaque */
 .marked
 {
   margin: 0 -0.4em;
@@ -320,18 +344,26 @@
   }
   .sp-text 
   {
-    font-size: 20px;
+    font-size: 23px;
   }
   .search-section input,
   .loading-input 
   {
     width: 100% !important;
   }
+  .search-section input 
+{
+  font-size: 1em;
+}
   .btn-confirm,
   .btn-cancel 
   {
     width: 100%;
     margin: 10px 0 0;
+  }
+  .one-btn
+  {
+    margin-left: 0% !important;
   }
   .steps  
   {

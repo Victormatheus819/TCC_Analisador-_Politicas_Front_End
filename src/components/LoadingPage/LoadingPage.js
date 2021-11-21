@@ -27,7 +27,7 @@ export default {
 			this.browserEvent = false;
 			if(error)
 			{
-				this.$router.push({ name: 'InitialPage', params: { errorConnect: true, urlProps: this.url } });
+				this.$router.push({ name: 'InitialPage', params: { errorConnect: !this.processError, urlProps: this.url } });
 			}
 			else
 			{
@@ -48,7 +48,7 @@ export default {
 			this.socket.onerror = function()
 			{
 				self.socket.close();
-				self.processError = true;
+				self.redirectInitial(true);
 			}
 
 			this.socket.onmessage = function(e)
