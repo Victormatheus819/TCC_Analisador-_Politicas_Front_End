@@ -182,14 +182,15 @@
 }
 .result-review
 {
-  margin: 20px;
+  margin: 50px;
 }
 .subtitle-result
 {
   text-align: left;
   margin: 12px 0 5px 0 !important;
-  font-size: 1.4em !important;
+  font-size: 1.3em !important;
   font-weight: 600 !important;
+  color:#000;
 }
 .initial-card-subtitle
 {
@@ -214,6 +215,18 @@
   text-align: center;
 }
 
+/* barra carregamento */
+.loading-text 
+{
+  font-size: 2.25em;
+}
+.item-center
+{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 /* carrossel */
 .item-center
 {
@@ -228,20 +241,44 @@
 }
 
 /* destaque */
-.marked
+.marked,
+.marked-second,
+.marked-third
 {
   margin: 0 -0.4em;
   padding: 0.1em 0.4em;
   border-radius: 0.8em 0.3em;
   background: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
+}
+.marked
+{
   background-image: linear-gradient(
     to right,
     rgba(255, 225, 0, 0.1),
     rgba(255, 225, 0, 0.7) 4%,
     rgba(255, 225, 0, 0.3)
   );
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+}
+.marked-second
+{
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.1),
+    rgba(255, 0, 0, 0.7) 4%,
+    rgba(255, 0, 0, 0.3)
+  );
+}
+.marked-third
+{
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 132, 255, 0.1),
+    rgba(0, 26, 255, 0.7) 4%,
+    rgba(0, 102, 255, 0.3)
+  );
 }
 .text-alert
 {
@@ -395,6 +432,10 @@
   }
   .lds-spinner {
     margin-left: 120px;
+  }
+  .result-review
+  {
+    margin: 10px;
   }
 
 }

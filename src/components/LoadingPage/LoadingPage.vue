@@ -25,6 +25,10 @@
 
 		<v-row class="section center-text">
 
+			<h1 class="title-section-secondary marked-second">
+                Aprenda mais...
+            </h1>
+
 			<v-col>
 				<v-carousel 
 					cycle 

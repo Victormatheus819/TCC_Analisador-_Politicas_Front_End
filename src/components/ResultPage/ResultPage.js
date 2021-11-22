@@ -26,12 +26,12 @@ export default {
 
 		if(this.result.politica_generica)
 		{
-			document.getElementById("generic_flag").innerHTML="O sistema considerou essa política de privacidade genérica, tenha atenção ao avaliar a politica de privacidade"
+			document.getElementById("generic_flag").innerHTML="O sistema considerou essa política de privacidade genérica, tenha atenção ao avaliar a politica de privacidade!"
 			document.getElementById("generic_flag").style.color ="#FFC947"
 		}
 		else
 		{
-			document.getElementById("generic_flag").innerHTML="Informações extraidas diretamente da politica de privacidade o sistema apenas resumiu as mesmas. "
+			document.getElementById("generic_flag").innerHTML="Informações extraidas diretamente da politica de privacidade. O sistema apenas resumiu as mesmas."
 		}
 
 		document.getElementById("dados_subtitle").innerHTML = this.result.coleta

@@ -38,7 +38,7 @@ export default {
 
 			let self = this;
 
-			if(!this.url)
+			if(!this.url || this.increasing_pct == 100)
 			{
 				return;
 			}
@@ -71,7 +71,6 @@ export default {
 				response => {
 					this.result = response.data;
 					this.increasing_pct = 100;
-					this.url = undefined;
 					if(this.socket != undefined)
 					{
 						this.socket.close();
@@ -103,7 +102,7 @@ export default {
 	},
 	async mounted() {
 
-		if(!this.url)
+		if(!this.url || this.increasing_pct == 100)
 		{
 			this.redirectInitial(false);
 		}
