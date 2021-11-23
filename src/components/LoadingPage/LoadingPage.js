@@ -14,9 +14,10 @@ export default {
 		socket: undefined,
 		result: {},
 		isModalConfirmationVisible: false,
-		connected: false,		
+		connected: 0,		
 		browserEvent: true,
-		processError:false
+		processError:false,
+		subtitle_text:"Espere até o carregamento da análise estar concluído"
 	}),
 	methods: {
 		redirectResult() {
@@ -45,7 +46,7 @@ export default {
 				return;
 			}
             
-			this.socket = new WebSocket('ws:/tcc-analise-poli-priv.herokuapp.com/ws/some_url/');
+			this.socket = new WebSocket('ws:/127.0.0.1:8000/ws/some_url/');
        
 			this.socket.onerror = function()
 			{
@@ -60,7 +61,7 @@ export default {
 				switch (data.message) {
 					case 'Pode iniciar processamento':
 						self.id = data.id;
-						self.connected = true;
+						self.connected = 1;
 						self.processText();
 						break;
 					case 'Atualização do processamento':
@@ -69,10 +70,13 @@ export default {
 			}		
 		},
 		processText() {
+			this.connected=2
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
 					this.result = response.data;
+					this.connected=2;
 					this.increasing_pct = 100;
+					this.subtitle_text= "Seu processamento está completo"
 					this.url = undefined;
 					if(this.socket != undefined)
 					{
@@ -88,11 +92,13 @@ export default {
 		manualInclusion(){
 			http.post("/socket/manual-inclusion").then(
 				response=>{
-				console.log(response.data.id)	
+				console.log(response.status)
+				if(response.status==200){
 				this.id = response.data.id
 				this.processText()
-			}).catch(()=>{
-				this.redirectInitial(true)
+				}else{
+					this.redirectInitial(true)
+				}
 			})
 
 		},

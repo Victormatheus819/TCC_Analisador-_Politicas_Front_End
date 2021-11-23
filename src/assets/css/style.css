@@ -13,6 +13,13 @@
   padding: 3% 2% 3%;
   justify-items: center;
 }
+.mascot{
+  height: 160px;
+  width:230px ;
+}
+.sinalizer{
+  color:#ffc773 ;
+}
 .center-text
 {
   text-align: center;

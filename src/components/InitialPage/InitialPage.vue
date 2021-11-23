@@ -57,7 +57,7 @@
                     </v-card-title>
                     <v-card-subtitle class="initial-card-subtitle">
                         <p>Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF)</p>
-                        <p>Realisado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho</p>
+                        <p>Realizado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho</p>
                         <p>Intuito</p>
                     </v-card-subtitle>
                 </v-card>
