@@ -234,6 +234,12 @@
   justify-content: center;
   align-items: center;
 }
+.curiosity-text
+{
+  font-size: 1.7em;
+  font-weight: 550;
+  padding: 10px 40px 10px 40px;
+}
 
 /* pop up */
 .v-dialog > .v-card > .v-card__text {
@@ -429,6 +435,10 @@
   .result-review
   {
     margin: 10px;
+  }
+  .curiosity-text
+  {
+    padding: 10px 30px 10px 30px;
   }
 
 }

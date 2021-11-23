@@ -43,8 +43,13 @@
 							tile
 						>
 							<v-row class="fill-height item-center">
-								<div class="text-h2">
-									{{curiosidade}} 
+								<div class="steps">
+									<div>
+										<p>IMAGENS</p>
+									</div>
+									<div class="curiosity-text">
+										{{curiosidade}} 
+									</div>
 								</div>
 							</v-row>
 

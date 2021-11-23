@@ -52,7 +52,7 @@
                             que esteja no Brasil ou no exterior.
                         </p>
                         <p>
-                            Lei: <a>http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm</a>
+                            <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm'>LINK PARA A LEI DA LGPD</a>
                         </p>
                     </v-card-subtitle>
                 </v-card>
