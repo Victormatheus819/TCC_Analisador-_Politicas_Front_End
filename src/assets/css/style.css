@@ -176,7 +176,6 @@
 /* card de informações */
 .box-text 
 {
-  height: 350px;
   display: flex;
   text-align: left; 
 }
@@ -416,10 +415,6 @@
   .steps div 
   {
     margin-top: 10px;
-  }
-  .box-text 
-  {
-    height: 450px;
   }
   .orange-marker,
   .yellow-marker
