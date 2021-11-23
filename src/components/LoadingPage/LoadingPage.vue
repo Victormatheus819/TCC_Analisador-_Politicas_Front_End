@@ -6,17 +6,19 @@
 				Analisando política de privacidade... 
 			</h1>
 			<span class="sp-text">
-				Espere até o carregamento da análise estar concluído
+				{{subtitle_text}}
 			</span>
 
 			<v-col class="search-section">
-                <div v-if="connected==false" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-				<v-progress-linear v-else color="light-blue" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
+                <div v-if="connected==0" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+		<v-progress-linear v-if="connected==1" color="light-blue lighten-1" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
 					<strong class="loading-text">
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
 				</v-progress-linear>				
-
+                <div v-if="connected==2">
+					<img class="mascot" src="@/assets/img/mascot.png"/>
+				</div>
 				<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
 				<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
 			</v-col>
@@ -25,9 +27,12 @@
 
 		<v-row class="section center-text">
 
+			<h1 class="title-section-secondary marked-second">
+                Aprenda mais...
+            </h1>
+
 			<v-col>
 				<v-carousel 
-					cycle 
 					height="500" 
 					hide-delimiter-background 
 					show-arrows-on-hover
@@ -39,8 +44,13 @@
 							tile
 						>
 							<v-row class="fill-height item-center">
-								<div class="text-h2">
-									{{curiosidade}} 
+								<div class="steps">
+									<div>
+										<p>IMAGENS</p>
+									</div>
+									<div class="curiosity-text">
+										{{curiosidade}} 
+									</div>
 								</div>
 							</v-row>
 

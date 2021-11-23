@@ -5,12 +5,12 @@
                 Analisador de políticas de privacidade 
             </h1>
             <span class="sp-text">
-                Analise finalizada para a política de privacidade indicada, informações são retiradas diretamente da política de privacidade
+                Análise finalizada para a política de privacidade indicada. Informações são retiradas diretamente do documento gerado pela empresa
             </span>
         </v-row>
  
         <v-row class="section center-text">
-            <h1 class="title-section-secondary">
+            <h1 class="title-section-secondary marked-second">
                 Resultado da análise
             </h1>
             <span class="sp-text" id="generic_flag" >
@@ -39,7 +39,7 @@
         </v-row>
 
         <v-row class="section center-text">
-            <h1 class="title-section-secondary">
+            <h1 class="title-section-secondary marked-third">
                 Continue com outra análise
             </h1>
             <v-col class="search-section">

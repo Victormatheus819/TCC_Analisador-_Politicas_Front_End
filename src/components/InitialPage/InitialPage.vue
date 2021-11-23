@@ -16,7 +16,7 @@
         </v-row>
 
         <v-row class="section center-text">
-            <h1 class="title-section-secondary">
+            <h1 class="title-section-secondary marked-second">
                 Como usar?
             </h1>
             <v-col class="steps">
@@ -36,7 +36,7 @@
         </v-row>
 
         <v-row class="section center-text">
-            <h1 class="title-section-secondary">
+            <h1 class="title-section-secondary marked-third">
                 Saiba mais...
             </h1>
             <v-col class="steps">
@@ -46,7 +46,14 @@
                         LGPD
                     </v-card-title>
                     <v-card-subtitle class="initial-card-subtitle">
-                        divsten to your favorite artists and albums whenever and wherever, ondivne and offdivne.
+                        <p>A Lei Geral de Proteção de Dados (13.709/2018) tem como principal objetivo proteger os direitos fundamentais 
+                            de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural. Também tem como 
+                            foco a padronização de regulamentos e práticas para promover a proteção aos dados pessoais de todo cidadão 
+                            que esteja no Brasil ou no exterior.
+                        </p>
+                        <p>
+                            <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm'>LINK PARA A LEI DA LGPD</a>
+                        </p>
                     </v-card-subtitle>
                 </v-card>
                 </div>
@@ -57,7 +64,7 @@
                     </v-card-title>
                     <v-card-subtitle class="initial-card-subtitle">
                         <p>Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF)</p>
-                        <p>Realisado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho</p>
+                        <p>Realizado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho</p>
                         <p>Intuito</p>
                     </v-card-subtitle>
                 </v-card>
