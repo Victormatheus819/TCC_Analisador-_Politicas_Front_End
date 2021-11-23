@@ -70,7 +70,6 @@ export default {
 			}		
 		},
 		processText() {
-			this.connected=2
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
 					this.result = response.data;

@@ -13,13 +13,6 @@
   padding: 3% 2% 3%;
   justify-items: center;
 }
-.mascot{
-  height: 160px;
-  width:230px ;
-}
-.sinalizer{
-  color:#ffc773 ;
-}
 .center-text
 {
   text-align: center;
@@ -264,7 +257,7 @@
   background: transparent;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
+  /*text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;*/
 }
 .marked
 {
@@ -279,18 +272,18 @@
 {
   background-image: linear-gradient(
     to right,
-    rgba(255, 0, 0, 0.1),
-    rgba(255, 0, 0, 0.7) 4%,
-    rgba(255, 0, 0, 0.3)
+    rgba(250, 73, 73, 0.1),
+    rgba(255, 82, 82, 0.7) 4%,
+    rgba(255, 83, 83, 0.3)
   );
 }
 .marked-third
 {
   background-image: linear-gradient(
     to right,
-    rgba(0, 132, 255, 0.1),
-    rgba(0, 26, 255, 0.7) 4%,
-    rgba(0, 102, 255, 0.3)
+    rgba(85, 171, 252, 0.1),
+    rgba(97, 113, 255, 0.7) 4%,
+    rgba(90, 154, 250, 0.3)
   );
 }
 .text-alert
@@ -298,6 +291,17 @@
   font-size: 18px;
   color:#ff0000;
   font-weight: bold;
+}
+.sinalizer
+{
+  color:#ffc773 ;
+}
+
+/* img */
+.mascot
+{
+  height: 160px;
+  width:230px ;
 }
 
 /*************** LOADING SPINNER ***************/
