@@ -85,7 +85,11 @@ export default {
 		async cancel() {
 			try
 			{   
-				http.post("/api/cancel", { id: this.socket.id, url: this.url }).then(response=>{console.log("Análise cancelada: " + response.data.success)})
+				if(this.increasing_pct != 100)
+				{
+					http.post("/api/cancel", { id: this.socket.id, url: this.url }).then(response=>{console.log("Análise cancelada: " + response.data.success)})
+				}
+				
 			}
 			finally
 			{
