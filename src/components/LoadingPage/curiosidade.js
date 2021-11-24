@@ -1,37 +1,38 @@
 let curiosity_serious = [
     {
-        "img": "logo.png", "text": "Lembre-se é sempre importante ler as políticas de privacidade de qualquer serviço contratado."
+        "img": "normal.png", "text": "Lembre-se é sempre importante ler as políticas de privacidade de qualquer serviço contratado."
     },
     {
-        "img": "logo.png", "text": "Dados criados nos sites de empresas, como login e senha, também são consideradas dados pessoais e estão sob a jurisdição da LGPD"
+        "img": "normal.png", "text": "Dados criados nos sites de empresas, como login e senha, também são consideradas dados pessoais e estão sob a jurisdição da LGPD"
     },
     {
-        "img": "logo.png", "text": "Mesmo após a dissolução de uma empresa, os seus dados compartilhados e tratados por ela continuam legislativamente com a mesma proteção."
+        "img": "surprise.png", "text": "Mesmo após a dissolução de uma empresa, os seus dados compartilhados e tratados por ela continuam legislativamente com a mesma proteção."
     },
     {
-        "img": "logo.png", "text": "Em caso de alteração de informação de tratamento de dados, o controlador deverá informar ao titular as alterações. Podendo o titular revogá-lo caso discorde da alteração."
+        "img": "search.png", "text": "Em caso de alteração de informação de tratamento de dados, o controlador deverá informar ao titular as alterações. Podendo o titular revogá-lo caso discorde da alteração."
     }
 ]
 
 let curiosity_funny = [
     {
-        "img": "logo.png", "text": "Nunca tente pedir um café para a aplicação! O Segurindo pode ficar nervoso!"
+        "img": "angry.png", "text": "Nunca tente pedir um café para a aplicação! O Segurindo pode ficar nervoso!"
     },
     {
-        "img": "logo.png", "text": "Os criadores, em um momento de loucura, apelidou a aplicação e o mascote como Segurindo. A mistura de segurança e lindo não ficou muito boa."
+        "img": "doubt.png", "text": "Os criadores, em um momento de loucura, apelidou a aplicação e o mascote como Segurindo. A mistura de segurança e lindo não ficou muito boa."
     }
 ]
 
 let curiosity_LGPD = [
     {
-        "img": "logo.png", "text": 'Art 15 da LGPD indica que: O término do tratamento de dados pessoais ocorrerá se a verificação de que a finalidade de tratamento foi alcançada ou se os dados deixaram de ser necessários ao alcance dessa mesma finalidade '
+        "img": "surprise.png", "text": 'Art 15 LGPD: O término do tratamento de dados pessoais ocorrerá se a finalidade de tratamento foi alcançada ou se os dados deixaram de ser necessários para a finalidade.'
     },
     {
-        "img": "logo.png", "text": "Art 20 da LGPD indica que: O titular dos dados tem direito a solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado de dados pessoais que afetem seus interesses"
+        "img": "surprise.png", "text": "Art 20 LGPD: O titular dos dados tem direito a solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado."
     }
 ]
 
-export function curiosityList(){
+export function curiosityList()
+{
     let result = [];
 
     let index_catch = [];

@@ -47,7 +47,7 @@
 								<div class="steps">
 									<div class="img-container">
 										<img
-											:src="require('@/assets/'+curiosity.img)"
+											:src="require('@/assets/img/' + curiosity.img)"
 										>
 									</div>
 									<div class="curiosity-text">
