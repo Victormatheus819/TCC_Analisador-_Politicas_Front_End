@@ -1,14 +1,13 @@
 import http from '../config/Http'
+import {curiosityList} from './curiosidade.js';
+
 export default {
 	name: 'LoadingPage',
 	props: {
 		url: { type: String, required: true }
 	},
 	data: () => ({
-		curiosidades: ["Lembre-se é sempre importante ler as politicas de privacidade de qualquer serviço contratado",
-		"Dados criados nos sites de empresas, como login e senha, também são consideradas dados pessoais e estão sob a jurisdição da LGPD",
-		"Os dados continuam com a mesma proteção, mesmo após  dissolução da empresa",
-		"Nunca tente pedir um café para a aplicação ele pode ficar nervosa"],
+		curiosities: [],
 		increasing_pct: 0,
 		id: undefined,
 		socket: undefined,
@@ -17,7 +16,7 @@ export default {
 		connected: 0,		
 		browserEvent: true,
 		processError:false,
-		subtitle_text:"Espere até o carregamento da análise estar concluído"
+		subtitle_text: "Espere até o carregamento da análise estar concluído"
 	}),
 	methods: {
 		redirectResult() {
@@ -128,6 +127,8 @@ export default {
 		{
 			this.redirectInitial(false);
 		}
+
+		this.curiosities = await curiosityList();
 
 		this.$nextTick(async function()
 		{

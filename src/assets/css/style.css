@@ -303,6 +303,15 @@
   height: 160px;
   width:230px ;
 }
+.img-container 
+{
+  display: block !important;
+  margin: auto;
+}
+.img-container img
+{
+  max-width: 40%;
+}
 
 /*************** LOADING SPINNER ***************/
 
