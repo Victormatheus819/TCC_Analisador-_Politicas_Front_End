@@ -37,7 +37,7 @@
 					hide-delimiter-background 
 					show-arrows-on-hover
 				>
-					<v-carousel-item v-for="(curiosidade) in curiosidades" :key="curiosidade">
+					<v-carousel-item v-for="(curiosity, i) in curiosities" :key="i">
 						<v-sheet 
 							color="light_grey" 
 							height="500" 
@@ -46,10 +46,10 @@
 							<v-row class="fill-height item-center">
 								<div class="steps">
 									<div>
-										<p>IMAGENS</p>
+										<p>img</p>
 									</div>
 									<div class="curiosity-text">
-										{{curiosidade}} 
+										{{curiosity.text}} 
 									</div>
 								</div>
 							</v-row>
