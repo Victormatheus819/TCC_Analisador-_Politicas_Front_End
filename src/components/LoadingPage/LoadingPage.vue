@@ -33,7 +33,7 @@
 
 			<v-col>
 				<v-carousel 
-					height="500" 
+					height="550" 
 					hide-delimiter-background 
 					show-arrows-on-hover
 				>
@@ -45,8 +45,10 @@
 						>
 							<v-row class="fill-height item-center">
 								<div class="steps">
-									<div>
-										<p>img</p>
+									<div class="img-container">
+										<img
+											:src="require('@/assets/'+curiosity.img)"
+										>
 									</div>
 									<div class="curiosity-text">
 										{{curiosity.text}} 

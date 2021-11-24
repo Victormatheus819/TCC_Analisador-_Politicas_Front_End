@@ -129,7 +129,6 @@ export default {
 		}
 
 		this.curiosities = await curiosityList();
-		console.log("here")
 
 		this.$nextTick(async function()
 		{

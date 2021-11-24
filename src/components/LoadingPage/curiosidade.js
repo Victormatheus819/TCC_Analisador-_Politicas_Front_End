@@ -6,7 +6,7 @@ let curiosity_serious = [
         "img": "logo.png", "text": "Dados criados nos sites de empresas, como login e senha, também são consideradas dados pessoais e estão sob a jurisdição da LGPD"
     },
     {
-        "img": "logo.png", "text": "Mesmo após a dissolução de uma empresa, os seus dados comparilhados e tratados por ela continuam legislativamente com a mesma proteção."
+        "img": "logo.png", "text": "Mesmo após a dissolução de uma empresa, os seus dados compartilhados e tratados por ela continuam legislativamente com a mesma proteção."
     },
     {
         "img": "logo.png", "text": "Em caso de alteração de informação de tratamento de dados, o controlador deverá informar ao titular as alterações. Podendo o titular revogá-lo caso discorde da alteração."
