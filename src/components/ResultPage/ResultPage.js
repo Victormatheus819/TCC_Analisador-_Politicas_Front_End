@@ -32,7 +32,7 @@ export default {
 		else
 		{
 			document.getElementById("generic_flag").innerHTML="Informações extraidas diretamente da politica de privacidade. O sistema apenas resumiu as mesmas."
-			document.getElementById("generic_flag").style.color ="#056e03"
+			document.getElementById("generic_flag").style.color ="#328a03"
 		}
 		if(this.result.coleta == []){
 			document.getElementById("dados_subtitle").innerHTML = "Essa politica de privacidade não indica especificamente sobre dados coletados, por isso não possivel extrair um conteúdo."
