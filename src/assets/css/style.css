@@ -18,7 +18,8 @@
   width:230px ;
 }
 .sinalizer{
-  color:#ffc773 ;
+  font-size : 25px;
+  color:#056e03;
 }
 .center-text
 {
@@ -264,7 +265,7 @@
   background: transparent;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
+  text-shadow: 0 0 0.2em #E5E7E9 , 0 0 0.2em #E5E7E9 , 0 0 0.2em #E5E7E9 ; 
 }
 .marked
 {
