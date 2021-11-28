@@ -13,6 +13,10 @@
             <h1 class="title-section-secondary marked-second">
                 Resultado da análise
             </h1>
+            <div class="icon-info">
+                <img :src="require('@/assets/img/search.png')"/>
+            </div>
+            
             <span class="sp-text" id="generic_flag" >
                 Informação de politíca genérica aqui
             </span>

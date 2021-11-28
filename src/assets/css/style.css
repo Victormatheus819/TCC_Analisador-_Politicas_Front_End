@@ -312,6 +312,17 @@
 {
   max-width: 40%;
 }
+.icon-info
+{
+  display: block !important;
+  position: absolute;
+  margin-top: -50px;
+}
+.icon-info img
+{
+  height: 60px;
+  width: 60px;
+}
 
 /*************** LOADING SPINNER ***************/
 
