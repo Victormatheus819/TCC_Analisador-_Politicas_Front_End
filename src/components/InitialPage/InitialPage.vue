@@ -19,6 +19,10 @@
             <h1 class="title-section-secondary marked-second">
                 Como usar?
             </h1>
+            <div class="icon-info">
+                <img :src="require('@/assets/img/search.png')"/>
+            </div>
+
             <v-col class="steps">
                 <div>
                     <span class="dot-number">1</span>
@@ -39,6 +43,10 @@
             <h1 class="title-section-secondary marked-third">
                 Saiba mais...
             </h1>
+            <div class="icon-info">
+                <img :src="require('@/assets/img/search.png')"/>
+            </div>
+            
             <v-col class="steps">
                 <div>
                     <v-card color="divght_grey" class="box-text" elevation="18" shaped>

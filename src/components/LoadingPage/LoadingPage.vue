@@ -30,6 +30,9 @@
 			<h1 class="title-section-secondary marked-second">
                 Aprenda mais...
             </h1>
+			<div class="icon-info">
+                <img :src="require('@/assets/img/search.png')"/>
+            </div>
 
 			<v-col>
 				<v-carousel 

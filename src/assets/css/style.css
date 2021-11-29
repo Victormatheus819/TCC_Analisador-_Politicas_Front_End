@@ -294,7 +294,8 @@
 }
 .sinalizer
 {
-  color:#ffc773 ;
+  font-size : 25px;
+  color:#056e03;
 }
 
 /* img */
@@ -311,6 +312,17 @@
 .img-container img
 {
   max-width: 40%;
+}
+.icon-info
+{
+  display: block !important;
+  position: absolute;
+  margin-top: -50px;
+}
+.icon-info img
+{
+  height: 60px;
+  width: 60px;
 }
 
 /*************** LOADING SPINNER ***************/
