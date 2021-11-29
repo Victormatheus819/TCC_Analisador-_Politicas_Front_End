@@ -31,7 +31,7 @@ export default {
 			} 
 			else 
 			{
-				this.$router.push({ name: 'LoadingPage', params: { url: this.url } })
+				this.$router.push({ name: 'LoadingPage', params: { url: this.url.trim() } })
 			}
 		},
 		cancel(){

@@ -45,7 +45,7 @@ export default {
 				return;
 			}
             
-			this.socket = new WebSocket('ws:/127.0.0.1:8000/ws/connect/');
+			this.socket = new WebSocket('wss:/tcc-analise-poli-priv.herokuapp.com/0/ws/connect/');
        
 			this.socket.onerror = function()
 			{
@@ -60,7 +60,6 @@ export default {
 				switch (data.message) {
 					case 'Pode iniciar processamento':
 						self.id = data.id;
-						self.connected = 1;
 						self.processText();
 						break;
 					case 'Atualização do processamento':
@@ -72,7 +71,7 @@ export default {
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
 					this.result = response.data;
-					this.connected=2;
+					this.connected= 1
 					this.increasing_pct = 100;
 					this.subtitle_text= "Seu processamento está completo"
 					if(this.socket != undefined)
