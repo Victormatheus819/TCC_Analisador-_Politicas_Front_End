@@ -43,7 +43,7 @@ export default {
 				return;
 			}
 
-			this.socket = new WebSocket('ws://tcc-analise-poli-priv.herokuapp.com/');
+			this.socket = new WebSocket('wss://tcc-analise-poli-priv.herokuapp.com/');
 
 			this.socket.onerror = function()
 			{
