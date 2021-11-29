@@ -71,9 +71,10 @@ export default {
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
 					this.result = response.data;
-					this.connected= 1
+					this.connected = 1
 					this.increasing_pct = 100;
-					this.subtitle_text= "Seu processamento está completo"
+					this.subtitle_text = "Seu processamento está completo";
+
 					if(this.socket != undefined)
 					{
 						this.socket.close();
@@ -88,13 +89,16 @@ export default {
 		manualInclusion(){
 			http.post("/socket/manual-inclusion").then(
 				response=>{
-				console.log(response.status)
-				if(response.status==200){
-				this.id = response.data.id
-				this.processText()
-				}else{
-					this.redirectInitial(true)
-				}
+
+					if(response.status == 200)
+					{
+						this.id = response.data.id
+						this.processText()
+					}
+					else
+					{
+						this.redirectInitial(true)
+					}
 			})
 
 		},
