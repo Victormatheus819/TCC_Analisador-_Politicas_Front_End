@@ -1,22 +1,22 @@
 import http from '../config/Http'
+import {curiosityList} from './curiosidade.js';
+
 export default {
 	name: 'LoadingPage',
 	props: {
 		url: { type: String, required: true }
 	},
 	data: () => ({
-		curiosidades: ["Lembre-se é sempre importante ler as politicas de privacidade de qualquer serviço contratado",
-		"Dados criados nos sites de empresas, como login e senha, também são consideradas dados pessoais e estão sob a jurisdição da LGPD",
-		"Os dados continuam com a mesma proteção, mesmo após  dissolução da empresa",
-		"Nunca tente pedir um café para a aplicação ele pode ficar nervosa"],
+		curiosities: [],
 		increasing_pct: 0,
 		id: undefined,
 		socket: undefined,
 		result: {},
 		isModalConfirmationVisible: false,
-		connected: false,		
+		connected: 0,		
 		browserEvent: true,
-		processError:false
+		processError:false,
+		subtitle_text: "Espere até o carregamento da análise estar concluído"
 	}),
 	methods: {
 		redirectResult() {
@@ -25,6 +25,8 @@ export default {
 		},
 		redirectInitial(error) {
 			this.browserEvent = false;
+			
+			
 			if(error)
 			{
 				this.$router.push({ name: 'InitialPage', params: { errorConnect: !this.processError, urlProps: this.url } });
@@ -38,17 +40,17 @@ export default {
 
 			let self = this;
 
-			if(!this.url)
+			if(!this.url || this.increasing_pct == 100)
 			{
 				return;
 			}
-
-			this.socket = new WebSocket('ws:/127.0.0.1:8000/ws/some_url/');
-
+            
+			this.socket = new WebSocket('ws:/127.0.0.1:8000/ws/connect/');
+       
 			this.socket.onerror = function()
 			{
 				self.socket.close();
-				self.redirectInitial(true);
+				self.manualInclusion()
 			}
 
 			this.socket.onmessage = function(e)
@@ -58,7 +60,7 @@ export default {
 				switch (data.message) {
 					case 'Pode iniciar processamento':
 						self.id = data.id;
-						self.connected = true;
+						self.connected = 1;
 						self.processText();
 						break;
 					case 'Atualização do processamento':
@@ -70,8 +72,9 @@ export default {
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
 					this.result = response.data;
+					this.connected=2;
 					this.increasing_pct = 100;
-					this.url = undefined;
+					this.subtitle_text= "Seu processamento está completo"
 					if(this.socket != undefined)
 					{
 						this.socket.close();
@@ -83,10 +86,27 @@ export default {
 				}
 			)
 		},
+		manualInclusion(){
+			http.post("/socket/manual-inclusion").then(
+				response=>{
+				console.log(response.status)
+				if(response.status==200){
+				this.id = response.data.id
+				this.processText()
+				}else{
+					this.redirectInitial(true)
+				}
+			})
+
+		},
 		async cancel() {
 			try
 			{   
-				http.post("/api/cancel", { id: this.socket.id, url: this.url }).then(response=>{console.log("Análise cancelada: " + response.data.success)})
+				if(this.increasing_pct != 100)
+				{
+					http.post("/api/cancel", { id: this.socket.id, url: this.url }).then(response=>{console.log("Análise cancelada: " + response.data.success)})
+				}
+				
 			}
 			finally
 			{
@@ -103,10 +123,12 @@ export default {
 	},
 	async mounted() {
 
-		if(!this.url)
+		if(!this.url || this.increasing_pct == 100)
 		{
 			this.redirectInitial(false);
 		}
+
+		this.curiosities = await curiosityList();
 
 		this.$nextTick(async function()
 		{
