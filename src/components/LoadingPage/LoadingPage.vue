@@ -16,9 +16,6 @@
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
 				</v-progress-linear>				
-                <div v-if="connected==2">
-					<img class="mascot" src="@/assets/img/mascot.png"/>
-				</div>
 				<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
 				<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
 			</v-col>

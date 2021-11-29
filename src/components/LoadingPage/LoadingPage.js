@@ -72,7 +72,6 @@ export default {
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
 					this.result = response.data;
-					this.connected=2;
 					this.increasing_pct = 100;
 					this.subtitle_text= "Seu processamento está completo"
 					if(this.socket != undefined)
