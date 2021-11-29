@@ -2,14 +2,16 @@
     <v-app>
         <v-app-bar
         app
-        color="dark_blue"
+        color="light-blue darken-4"
         >
-        <v-toolbar-title class="white--text title">Segurindo analisador</v-toolbar-title>
+        <v-avatar :tile="true">
+            <img :src="require('@/assets/img/search.png')" alt="logo">
+        </v-avatar>
+        <v-toolbar-title class="white--text title" style='font-size: 1.6em !important'>Segurindo analisador</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
-      <router-view></router-view>
-      
+        <router-view></router-view>
     </v-main>
     
     <VLibras />
@@ -19,9 +21,12 @@
 
 <script>
 import { VLibras } from '@vue-a11y/vlibras'
+
 export default {
     name: 'App',
-    components:{VLibras},
+    components:{
+        VLibras
+    },
     data: () => ({
     //
     }),
