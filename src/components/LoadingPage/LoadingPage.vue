@@ -11,11 +11,13 @@
 
 			<v-col class="search-section">
                 <div v-if="connected == 0" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-		<v-progress-linear v-else color="light-blue lighten-1" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
+				
+				<v-progress-linear v-else color="light-blue lighten-1" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
 					<strong class="loading-text">
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
-				</v-progress-linear>				
+				</v-progress-linear>
+
 				<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
 				<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
 			</v-col>
@@ -28,7 +30,7 @@
                 Aprenda mais...
             </h1>
 			<div class="icon-info">
-                <img :src="require('@/assets/img/search.png')"/>
+                <img draggable="false" :src="require('@/assets/img/victory.png')"/>
             </div>
 
 			<v-col>
@@ -46,7 +48,7 @@
 							<v-row class="fill-height item-center">
 								<div class="steps">
 									<div class="img-container">
-										<img
+										<img draggable="false"
 											:src="require('@/assets/img/' + curiosity.img)"
 										>
 									</div>
@@ -94,7 +96,7 @@
 						Erro no processamento
 					</v-toolbar>
 					<v-card-text>
-						<div class="sp-text justify-center">Ocorreu um erro no processamento do texto!</div>
+						<div class="sp-text justify-center">{{errorMessage}}</div>
 						<div class="sp-text justify-center dialog-text-end">Por favor, volte a página inicial!</div>
 					</v-card-text>
 					<v-card-actions>

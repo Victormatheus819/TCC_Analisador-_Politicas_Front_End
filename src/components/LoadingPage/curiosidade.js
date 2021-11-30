@@ -1,6 +1,6 @@
 let curiosity_serious = [
     {
-        "img": "normal.png", "text": "Lembre-se é sempre importante ler as políticas de privacidade de qualquer serviço contratado."
+        "img": "nerd.png", "text": "Lembre-se é sempre importante ler as políticas de privacidade de qualquer serviço contratado."
     },
     {
         "img": "normal.png", "text": "Dados criados nos sites de empresas, como login e senha, também são consideradas dados pessoais e estão sob a jurisdição da LGPD"
