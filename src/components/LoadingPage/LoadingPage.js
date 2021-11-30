@@ -61,6 +61,7 @@ export default {
 				switch (data.message) {
 					case 'Pode iniciar processamento':
 						self.id = data.id;
+						self.connected = 1;
 						self.processText();
 						break;
 					case 'Atualização do processamento':
@@ -73,7 +74,6 @@ export default {
 				response => {
 					this.result = response.data;
 
-					this.connected = 1
 					this.increasing_pct = 100;
 					this.subtitle_text = "Seu processamento está completo";
 
@@ -93,20 +93,22 @@ export default {
 				}
 			)
 		},
-		manualInclusion(){
+		async manualInclusion(){
 			http.post("/socket/manual-inclusion").then(
-				response=>{
+				response=>
+				{
+					this.id = response.data.id;
+					this.connected = 1;
+					this.processText();
 
-					if(response.status == 200)
-					{
-						this.id = response.data.id
-						this.processText()
-					}
-					else
-					{
-						this.redirectInitial(true)
-					}
-			})
+					this.increasing_pct = this.increasing_pct + 50;
+				}
+			).catch(
+				() =>
+				{
+					this.redirectInitial(true);
+				}
+			)
 
 		},
 		async cancel() {

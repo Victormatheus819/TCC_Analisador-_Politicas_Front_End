@@ -20,7 +20,7 @@
                 Como usar?
             </h1>
             <div class="icon-info">
-                <img :src="require('@/assets/img/doubt.png')"/>
+                <img draggable="false" :src="require('@/assets/img/doubt.png')"/>
             </div>
 
             <v-col class="steps">
@@ -44,7 +44,7 @@
                 Saiba mais...
             </h1>
             <div class="icon-info">
-                <img :src="require('@/assets/img/nerd.png')"/>
+                <img draggable="false" :src="require('@/assets/img/nerd.png')"/>
             </div>
             
             <v-col class="steps">
