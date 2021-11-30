@@ -16,7 +16,8 @@ export default {
 		connected: 0,		
 		browserEvent: true,
 		processError:false,
-		subtitle_text: "Espere até o carregamento da análise estar concluído"
+		subtitle_text: "Espere até o carregamento da análise estar concluído",
+		errorMessage: "Ocorreu um erro no processamento do texto!"
 	}),
 	methods: {
 		redirectResult() {
@@ -71,6 +72,7 @@ export default {
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
 					this.result = response.data;
+
 					this.connected = 1
 					this.increasing_pct = 100;
 					this.subtitle_text = "Seu processamento está completo";
@@ -78,10 +80,15 @@ export default {
 					if(this.socket != undefined)
 					{
 						this.socket.close();
-					}
+					}						
 				}	
 			).catch(
-				() => {
+				(error) => 
+				{
+					if(error.response.data)
+					{
+						this.errorMessage = error.response.data.error;
+					}
 					this.processError = true;
 				}
 			)
