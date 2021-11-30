@@ -12,18 +12,28 @@ export default {
 		isModalVisible: false
 	}),
 	methods: {
-		validate() {
-            var isUrl = null
-			try 
+		validate(){
+
+			var isUrl = null
+
+			if( !['café', 'cafe', 'coffee'].includes(this.url) )
 			{
-				new URL(this.url);
-				isUrl = true
-			} 
-			catch (e) 
-			{
-				this.alert = true;
-				console.log(e)
+				try 
+				{
+					new URL(this.url);
+					isUrl = true;
+				} 
+				catch (e) 
+				{
+					this.alert = true;
+					return;
+				}
 			}
+			else
+			{
+				isUrl = true;
+			}
+            
 			
 			if ((this.url == "" || this.url == undefined) || isUrl == null) 
 			{
