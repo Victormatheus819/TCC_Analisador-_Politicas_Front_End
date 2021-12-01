@@ -16,7 +16,8 @@ export default {
 		connected: 0,		
 		browserEvent: true,
 		processError:false,
-		subtitle_text: "Espere até o carregamento da análise estar concluído"
+		subtitle_text: "Espere até o carregamento da análise estar concluído",
+		errorText:""
 	}),
 	methods: {
 		redirectResult() {
@@ -70,17 +71,24 @@ export default {
 		processText() {
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
-					this.result = response.data;
-					this.connected= 1
-					this.increasing_pct = 100;
-					this.subtitle_text= "Seu processamento está completo"
+					console.log(response.status)
+					if(response.status == 200){
+						this.result = response.data;
+						this.connected= 1
+						this.increasing_pct = 100;
+						this.subtitle_text= "Seu processamento está completo"
+					}else{
+						this.errorText= response.data.error
+					}
 					if(this.socket != undefined)
 					{
 						this.socket.close();
 					}
 				}	
 			).catch(
-				() => {
+				(response) => {
+					console.log()
+					this.errorText=response.data.error
 					this.processError = true;
 				}
 			)
@@ -88,7 +96,6 @@ export default {
 		manualInclusion(){
 			http.post("/socket/manual-inclusion").then(
 				response=>{
-				console.log(response.status)
 				if(response.status==200){
 				this.id = response.data.id
 				this.processText()

@@ -91,10 +91,10 @@
 			>
 				<v-card>
 					<v-toolbar color="primary" dark class="title-section-secondary">
-						Erro no processamento
+						Erro no sistema
 					</v-toolbar>
 					<v-card-text>
-						<div class="sp-text justify-center">Ocorreu um erro no processamento do texto!</div>
+						<div class="sp-text justify-center">{{errorText}}</div>
 						<div class="sp-text justify-center dialog-text-end">Por favor, volte a página inicial!</div>
 					</v-card-text>
 					<v-card-actions>
