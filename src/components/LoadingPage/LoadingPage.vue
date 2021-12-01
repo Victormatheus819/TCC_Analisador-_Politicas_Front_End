@@ -68,13 +68,18 @@
 	<!-- MODAL CANCELAMENTO DE PROCESSAMENTO -->
 		<v-dialog
 			v-model="isModalConfirmationVisible"
+			persistent
 			transition="dialog-top-transition"
 			max-width="600"
 		>
 			<v-card>
-				<v-toolbar color="primary" dark class="title-section-secondary">
+				<v-toolbar color="orange darken-3" dark class="title-section-secondary">
 					Cancelar análise
 				</v-toolbar>
+				<div class="icon-info">
+					<img draggable="false" :src="require('@/assets/img/victory.png')"/>
+				</div>
+
 				<v-card-text>
 					<div class="sp-text justify-center dialog-text-end">Deseja realmente cancelar a análise da política de privacidade?</div>
 				</v-card-text>
@@ -89,18 +94,22 @@
 		<v-dialog
 				v-model="processError"
 				transition="dialog-top-transition"
+				persistent
 				max-width="600"
 			>
 				<v-card>
-					<v-toolbar color="primary" dark class="title-section-secondary">
+					<v-toolbar color="red darken-3" dark class="title-section-secondary">
 						Erro no processamento
 					</v-toolbar>
+			
 					<v-card-text>
 						<div class="sp-text justify-center">{{errorMessage}}</div>
 						<div class="sp-text justify-center dialog-text-end">Por favor, volte a página inicial!</div>
 					</v-card-text>
+
 					<v-card-actions>
-						<button class="btn-confirm dialog-btn one-btn" @click="redirectInitial(true)">Voltar</button>
+						<img class="dialog-img" draggable="false" :src="require('@/assets/img/sad.png')"/>
+						<button class="btn-confirm dialog-btn one-btn" @click="redirectInitial(true)">VOLTAR</button>
 					</v-card-actions>
 				</v-card>
 		</v-dialog>

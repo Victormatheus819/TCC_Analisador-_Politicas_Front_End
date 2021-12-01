@@ -324,6 +324,12 @@
   height: 85px;
   width: 85px;
 }
+.dialog-img
+{
+  height: 100px;
+  width: 100px;
+  margin-left: -20px;
+}
 
 /*************** LOADING SPINNER ***************/
 
@@ -471,6 +477,10 @@
   .curiosity-text
   {
     padding: 10px 30px 10px 30px;
+  }
+  .dialog-img
+  {
+    display: none;
   }
 
 }

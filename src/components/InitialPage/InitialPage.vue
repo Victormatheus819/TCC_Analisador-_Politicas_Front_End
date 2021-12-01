@@ -87,13 +87,14 @@
 			max-width="600"
 		>
 			<v-card>
-				<v-toolbar color="primary" dark class="title-section-secondary">
+				<v-toolbar color="red darken-3" dark class="title-section-secondary">
 					Erro conexão
 				</v-toolbar>
 				<v-card-text class='card-text'>
 					<div class="sp-text justify-center dialog-text-end">Erro de conexão! Tente novamente mais tarde.</div>
 				</v-card-text>
 				<v-card-actions>
+                    <img class="dialog-img" draggable="false" :src="require('@/assets/img/sad.png')"/>
 					<button class="btn-confirm dialog-btn one-btn" @click="cancel()">OK</button>
 				</v-card-actions>
 			</v-card>
