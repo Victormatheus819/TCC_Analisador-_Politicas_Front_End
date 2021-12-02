@@ -6,7 +6,7 @@
                 Analisador de políticas de privacidade 
             </h1>
             <span class="sp-text">
-                Analise para evidenciar a finalidade e dados coletados indicados pelas empresas
+                Analise para evidenciar a finalidade e dados coletados indicados pelas empresas, através da URL da politíca de privacidade desejada
             </span>
                 <p id="alerText" v-if="alert==true" class="text-alert" >Por favor insira uma url válida Ex: http://seusite.com</p>  
                 <v-col class="search-section">

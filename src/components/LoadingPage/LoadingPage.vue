@@ -17,9 +17,13 @@
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
 				</v-progress-linear>
+				<div class="steps">
+					<span class="button-info-text" v-if="increasing_pct!=100">Para cancelar a análise que está sendo realizada 👉</span>
+					<span class="button-info-text marked" v-else>Para visualizar o resultado da análise 👉</span>
 
-				<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
-				<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
+					<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
+					<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
+				</div>
 			</v-col>
 
 		</v-row>
@@ -76,9 +80,6 @@
 				<v-toolbar color="orange darken-3" dark class="title-section-secondary">
 					Cancelar análise
 				</v-toolbar>
-				<div class="icon-info">
-					<img draggable="false" :src="require('@/assets/img/victory.png')"/>
-				</div>
 
 				<v-card-text>
 					<div class="sp-text justify-center dialog-text-end">Deseja realmente cancelar a análise da política de privacidade?</div>
