@@ -37,7 +37,8 @@
 {
   font-size: 30px;
 }
-.sp-text 
+.sp-text,
+.sp-text-generic
 {
   display: block;
   font-size: 27px;
@@ -46,6 +47,12 @@
   color: rgb(48, 48, 48);
   text-align: center;
   margin: auto;
+}
+.sp-text-generic
+{
+  margin-top: 30px;
+  background: rgb(88, 88, 88);
+  
 }
 
 /* seção de busca */
@@ -299,8 +306,8 @@
 }
 .sinalizer
 {
-   text-decoration:underline ;
-  color:#056e03;
+  text-decoration:underline ;
+  color:#283593;
 }
 
 /* img */

@@ -26,21 +26,21 @@ export default {
 
 		if(this.result.politica_generica)
 		{
-			document.getElementById("generic_flag").innerHTML="O sistema considerou essa política de privacidade genérica, tenha atenção ao avaliar a politica de privacidade!"
-			document.getElementById("generic_flag").style.color ="#878a03"
+			document.getElementById("generic_flag").innerHTML="O sistema considerou essa política de privacidade genérica! Tenha atenção ao avaliar a politica de privacidade."
+			document.getElementById("generic_flag").style.color ="#FFFF00"
 		}
 		else
 		{
-			document.getElementById("generic_flag").innerHTML="Informações extraidas diretamente da politica de privacidade. O sistema apenas resumiu as mesmas."
-			document.getElementById("generic_flag").style.color ="#328a03"
+			document.getElementById("generic_flag").innerHTML="Informações extraidas diretamente da política de privacidade. O sistema apenas resumiu as informações."
+			document.getElementById("generic_flag").style.color ="#B2FF59"
 		}
 		if(this.result.coleta == []){
-			document.getElementById("dados_subtitle").innerHTML = "Essa politica de privacidade não indica especificamente sobre dados coletados, por isso não possivel extrair um conteúdo."
+			document.getElementById("dados_subtitle").innerHTML = "Essa política de privacidade não indica especificamente sobre dados coletados, por isso não possivel extrair um conteúdo."
 		}else{
 			document.getElementById("dados_subtitle").innerHTML = this.result.coleta	
 		}
 		if(this.result.finalidade == []){
-			document.getElementById("finalidade_subtitle").innerHTML = "Essa politica de privacidade não indica especificamente sobre a finalidade de uso dos dados, por isso não foi possivel extrair um conteúdo."
+			document.getElementById("finalidade_subtitle").innerHTML = "Essa política de privacidade não indica especificamente sobre a finalidade de uso dos dados, por isso não foi possivel extrair um conteúdo."
 		}else{
 			document.getElementById("finalidade_subtitle").innerHTML = this.result.finalidade
 		}

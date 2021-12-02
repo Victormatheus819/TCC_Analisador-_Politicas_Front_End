@@ -25,7 +25,7 @@
                 <img draggable="false" :src="require('@/assets/img/victory.png')"/>
             </div>
             
-            <span class="sp-text" id="generic_flag" >
+            <span class="sp-text-generic" id="generic_flag" >
                 Informação de politíca genérica aqui
             </span>
                 <div class="result-review">

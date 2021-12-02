@@ -80,9 +80,6 @@
 				<v-toolbar color="orange darken-3" dark class="title-section-secondary">
 					Cancelar análise
 				</v-toolbar>
-				<div class="icon-info">
-					<img draggable="false" :src="require('@/assets/img/victory.png')"/>
-				</div>
 
 				<v-card-text>
 					<div class="sp-text justify-center dialog-text-end">Deseja realmente cancelar a análise da política de privacidade?</div>
