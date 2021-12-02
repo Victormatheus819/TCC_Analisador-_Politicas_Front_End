@@ -14,7 +14,7 @@
                 Resultado da análise
             </h1>
             <div class="icon-info">
-                <img :src="require('@/assets/img/search.png')"/>
+                <img draggable="false" :src="require('@/assets/img/victory.png')"/>
             </div>
             
             <span class="sp-text" id="generic_flag" >
@@ -46,6 +46,10 @@
             <h1 class="title-section-secondary marked-third">
                 Continue com outra análise
             </h1>
+            <div class="icon-info">
+                <img draggable="false" :src="require('@/assets/img/search.png')"/>
+            </div>
+
             <v-col class="search-section">
                 <button class="btn-confirm" @click="redirect()">REALIZAR OUTRA ANÁLISE</button>
             </v-col>  

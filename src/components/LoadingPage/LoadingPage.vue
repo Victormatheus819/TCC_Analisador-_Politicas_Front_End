@@ -11,11 +11,13 @@
 
 			<v-col class="search-section">
                 <div v-if="connected == 0" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-		<v-progress-linear v-else color="light-blue lighten-1" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
+				
+				<v-progress-linear v-else color="light-blue lighten-1" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
 					<strong class="loading-text">
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
-				</v-progress-linear>				
+				</v-progress-linear>
+
 				<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
 				<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
 			</v-col>
@@ -28,7 +30,7 @@
                 Aprenda mais...
             </h1>
 			<div class="icon-info">
-                <img :src="require('@/assets/img/search.png')"/>
+                <img draggable="false" :src="require('@/assets/img/victory.png')"/>
             </div>
 
 			<v-col>
@@ -46,7 +48,7 @@
 							<v-row class="fill-height item-center">
 								<div class="steps">
 									<div class="img-container">
-										<img
+										<img draggable="false"
 											:src="require('@/assets/img/' + curiosity.img)"
 										>
 									</div>
@@ -66,13 +68,18 @@
 	<!-- MODAL CANCELAMENTO DE PROCESSAMENTO -->
 		<v-dialog
 			v-model="isModalConfirmationVisible"
+			persistent
 			transition="dialog-top-transition"
 			max-width="600"
 		>
 			<v-card>
-				<v-toolbar color="primary" dark class="title-section-secondary">
+				<v-toolbar color="orange darken-3" dark class="title-section-secondary">
 					Cancelar análise
 				</v-toolbar>
+				<div class="icon-info">
+					<img draggable="false" :src="require('@/assets/img/victory.png')"/>
+				</div>
+
 				<v-card-text>
 					<div class="sp-text justify-center dialog-text-end">Deseja realmente cancelar a análise da política de privacidade?</div>
 				</v-card-text>
@@ -87,18 +94,22 @@
 		<v-dialog
 				v-model="processError"
 				transition="dialog-top-transition"
+				persistent
 				max-width="600"
 			>
 				<v-card>
-					<v-toolbar color="primary" dark class="title-section-secondary">
+					<v-toolbar color="red darken-3" dark class="title-section-secondary">
 						Erro no sistema
 					</v-toolbar>
+			
 					<v-card-text>
-						<div class="sp-text justify-center">{{errorText}}</div>
+						<div class="sp-text justify-center">{{errorMessage}}</div>
 						<div class="sp-text justify-center dialog-text-end">Por favor, volte a página inicial!</div>
 					</v-card-text>
+
 					<v-card-actions>
-						<button class="btn-confirm dialog-btn one-btn" @click="redirectInitial(true)">Voltar</button>
+						<img class="dialog-img" draggable="false" :src="require('@/assets/img/sad.png')"/>
+						<button class="btn-confirm dialog-btn one-btn" @click="redirectInitial(true)">VOLTAR</button>
 					</v-card-actions>
 				</v-card>
 		</v-dialog>

@@ -17,7 +17,7 @@ export default {
 		browserEvent: true,
 		processError:false,
 		subtitle_text: "Espere até o carregamento da análise estar concluído",
-		errorText:""
+		errorMessage: "Ocorreu um erro no processamento do texto!"
 	}),
 	methods: {
 		redirectResult() {
@@ -61,6 +61,7 @@ export default {
 				switch (data.message) {
 					case 'Pode iniciar processamento':
 						self.id = data.id;
+						self.connected = 1;
 						self.processText();
 						break;
 					case 'Atualização do processamento':
@@ -71,38 +72,45 @@ export default {
 		processText() {
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
-					console.log(response.status)
-					if(response.status == 200){
-						this.result = response.data;
-						this.connected= 1
-						this.increasing_pct = 100;
-						this.subtitle_text= "Seu processamento está completo"
-					}else{
-						this.errorText= response.data.error
-					}
+
+					this.result = response.data;
+
+					this.increasing_pct = 100;
+					this.subtitle_text = "Seu processamento está completo";
+					
 					if(this.socket != undefined)
 					{
 						this.socket.close();
-					}
+					}						
 				}	
 			).catch(
-				(response) => {
-					console.log()
-					this.errorText=response.data.error
+				(error) => 
+				{
+					if(error.response.data)
+					{
+						this.errorMessage = error.response.data.error;
+					}
 					this.processError = true;
 				}
 			)
 		},
-		manualInclusion(){
+		async manualInclusion(){
 			http.post("/socket/manual-inclusion").then(
-				response=>{
-				if(response.status==200){
-				this.id = response.data.id
-				this.processText()
-				}else{
-					this.redirectInitial(true)
+				response=>
+				{
+					this.id = response.data.id;
+					this.connected = 1;
+					
+					this.processText();
+
+					this.increasing_pct = this.increasing_pct + 50;
 				}
-			})
+			).catch(
+				() =>
+				{
+					this.redirectInitial(true);
+				}
+			)
 
 		},
 		async cancel() {
