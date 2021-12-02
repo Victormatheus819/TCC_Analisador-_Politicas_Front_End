@@ -40,15 +40,12 @@
 .sp-text 
 {
   display: block;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   font-size: 27px;
   font-weight: 500;
   line-height: 1.5;
   color: rgb(48, 48, 48);
   text-align: center;
+  margin: auto;
 }
 
 /* seção de busca */
@@ -124,6 +121,13 @@
 .one-btn
 {
   margin-left: 50% !important;
+}
+.button-info-text
+{
+  padding-top: 7px !important;
+  font-weight: 500;
+  font-size: 1.7em;
+  margin-right: 10px !important;
 }
 
 /* seção de lista */
@@ -239,6 +243,7 @@
   font-size: 1.7em;
   font-weight: 550;
   padding: 10px 40px 10px 40px;
+  margin: auto;
 }
 
 /* pop up */
@@ -257,7 +262,7 @@
   background: transparent;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  /*text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;*/
+  text-shadow: 0 0 0.2em #ffffff, 0 0 0.2em #ffffff, 0 0 0.2em #ffffff;
 }
 .marked
 {
@@ -479,6 +484,10 @@
     padding: 10px 30px 10px 30px;
   }
   .dialog-img
+  {
+    display: none;
+  }
+  .button-info-text
   {
     display: none;
   }

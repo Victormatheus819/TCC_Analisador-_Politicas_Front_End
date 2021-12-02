@@ -4,9 +4,17 @@
             <h1 class="title-section-principal marked">
                 Analisador de políticas de privacidade 
             </h1>
-            <span class="sp-text">
-                Análise finalizada para a política de privacidade indicada. Informações são retiradas diretamente do documento gerado pela empresa
-            </span>
+            
+            <div class="steps">
+                <div class="img-container">
+                    <img draggable="false"
+                        :src="require('@/assets/img/obg.png')"
+                    >
+                </div>
+                <span class="sp-text">
+                    Análise finalizada para a política de privacidade indicada. Ressaltamos que as informações são retiradas diretamente do documento gerado pela empresa
+                </span>
+            </div>
         </v-row>
  
         <v-row class="section center-text">

@@ -17,9 +17,13 @@
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
 				</v-progress-linear>
+				<div class="steps">
+					<span class="button-info-text" v-if="increasing_pct!=100">Para cancelar a análise que está sendo realizada 👉</span>
+					<span class="button-info-text marked" v-else>Para visualizar o resultado da análise 👉</span>
 
-				<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
-				<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
+					<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
+					<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
+				</div>
 			</v-col>
 
 		</v-row>
