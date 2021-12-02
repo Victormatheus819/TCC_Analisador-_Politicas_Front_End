@@ -72,11 +72,12 @@ export default {
 		processText() {
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				response => {
+
 					this.result = response.data;
 
 					this.increasing_pct = 100;
 					this.subtitle_text = "Seu processamento está completo";
-
+					
 					if(this.socket != undefined)
 					{
 						this.socket.close();
@@ -99,6 +100,7 @@ export default {
 				{
 					this.id = response.data.id;
 					this.connected = 1;
+					
 					this.processText();
 
 					this.increasing_pct = this.increasing_pct + 50;

@@ -99,7 +99,7 @@
 			>
 				<v-card>
 					<v-toolbar color="red darken-3" dark class="title-section-secondary">
-						Erro no processamento
+						Erro no sistema
 					</v-toolbar>
 			
 					<v-card-text>
