@@ -10,20 +10,33 @@
 			</span>
 
 			<v-col class="search-section">
-                <div v-if="connected == 0" class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+                <div v-if="connected == 0" class="lds-spinner">
+					<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+				</div>
 				
 				<v-progress-linear v-else color="light-blue lighten-1" height="56" v-model="increasing_pct" striped elevation="18" style="margin-block-end: 10px;">
 					<strong class="loading-text">
 						{{ Math.ceil(parseInt(increasing_pct, 10)) }}%
 					</strong>
 				</v-progress-linear>
-				<div class="steps">
-					<span class="button-info-text" v-if="increasing_pct!=100">Para cancelar a análise que está sendo realizada 👉</span>
-					<span class="button-info-text marked" v-else>Para visualizar o resultado da análise 👉</span>
 
-					<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">CANCELAR</button>
-					<button class="btn-confirm" @click="redirectResult()" v-else>VER RESULTADO</button>
+				<div class="steps">
+					<span class="button-info-text" v-if="increasing_pct!=100">
+						Para cancelar a análise que está sendo realizada 👉
+					</span>
+					<span class="button-info-text marked" v-else>
+						Para visualizar o resultado da análise 👉
+					</span>
+
+					<button class="btn-cancel" @click.stop="isModalConfirmationVisible = true" v-if="increasing_pct!=100">
+						CANCELAR
+					</button>
+					<button class="btn-confirm" @click="redirectResult()" v-else>
+						VER RESULTADO
+					</button>
 				</div>
+
 			</v-col>
 
 		</v-row>
@@ -78,15 +91,20 @@
 		>
 			<v-card>
 				<v-toolbar color="orange darken-3" dark class="title-section-secondary">
-					Cancelar análise
+					Cancelar análise?!
 				</v-toolbar>
 
 				<v-card-text>
 					<div class="sp-text justify-center dialog-text-end">Deseja realmente cancelar a análise da política de privacidade?</div>
 				</v-card-text>
+
 				<v-card-actions>
-					<button class="btn-confirm dialog-btn" @click="cancel()">SIM</button>
-					<button class="btn-cancel dialog-btn" @click.stop="isModalConfirmationVisible = false">NÃO</button>
+					<button class="btn-confirm dialog-btn" @click="cancel()">
+						SIM
+					</button>
+					<button class="btn-cancel dialog-btn" @click.stop="isModalConfirmationVisible = false">
+						NÃO
+					</button>
 				</v-card-actions>
 			</v-card>
 		</v-dialog>
@@ -100,7 +118,7 @@
 			>
 				<v-card>
 					<v-toolbar color="red darken-3" dark class="title-section-secondary">
-						Erro no sistema
+						Erro no sistema!
 					</v-toolbar>
 			
 					<v-card-text>
@@ -110,7 +128,9 @@
 
 					<v-card-actions>
 						<img class="dialog-img" draggable="false" :src="require('@/assets/img/sad.png')"/>
-						<button class="btn-confirm dialog-btn one-btn" @click="redirectInitial(true)">VOLTAR</button>
+						<button class="btn-confirm dialog-btn one-btn" @click="redirectInitial(true)">
+							VOLTAR
+						</button>
 					</v-card-actions>
 				</v-card>
 		</v-dialog>

@@ -6,7 +6,7 @@
                 Analisador de políticas de privacidade 
             </h1>
             <span class="sp-text">
-                Analise para evidenciar a finalidade e dados coletados indicados pelas empresas, através da URL da politíca de privacidade desejada
+                Analise para evidenciar a finalidade e dados coletados indicados pelas empresas através da indicação da URL da política de privacidade desejada
             </span>
                 <p id="alerText" v-if="alert==true" class="text-alert" >Por favor insira uma url válida Ex: http://seusite.com</p>  
                 <v-col class="search-section">
@@ -34,7 +34,7 @@
                 </div>
                 <div>
                     <span class="dot-number">3</span>
-                    <span class="dot-text">Depois clique em ver resultados e a análise será apresentada</span>
+                    <span class="dot-text">Depois clique em ver resultado e a análise será apresentada</span>
                 </div>
             </v-col>
         </v-row>
@@ -54,13 +54,17 @@
                         LGPD
                     </v-card-title>
                     <v-card-subtitle class="initial-card-subtitle">
-                        <p>A Lei Geral de Proteção de Dados (13.709/2018) tem como principal objetivo proteger os direitos fundamentais 
-                            de liberdade e de privacidade e o livre desenvolvimento da personalidade da pessoa natural. Também tem como 
-                            foco a padronização de regulamentos e práticas para promover a proteção aos dados pessoais de todo cidadão 
-                            que esteja no Brasil ou no exterior.
+                        <p>
+                            Esta lei dispõe sobre o tratamento de pessoas, inclusive nos meios digitais, por pessoa natural ou por pessoa 
+                            jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de 
+                            privacidade e o livre desenvolvimento da personalidade da pessoa natural.
+                        </p>
+                        <p>    
+                            A Lei Geral de Proteção de Dados (13.709/2018) também tem como foco a padronização de regulamentos e práticas 
+                            para promover a proteção aos dados pessoais de todo cidadão que esteja no Brasil ou no exterior.
                         </p>
                         <p>
-                            <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm'>LINK PARA A LEI DA LGPD</a>
+                            <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm'>LINK PARA LGPD (LEI 13.709/2018)</a>
                         </p>
                     </v-card-subtitle>
                 </v-card>
@@ -71,9 +75,17 @@
                         Sobre nós
                     </v-card-title>
                     <v-card-subtitle class="initial-card-subtitle">
-                        <p>Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF)</p>
-                        <p>Realizado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho</p>
-                        <p>Intuito</p>
+                        <p>
+                            Trabalho de Conclusão de Curso de graduação de Sistemas de Informação da Universidade Federal Fluminense (UFF)
+                        </p>
+                        <p>
+                            Realizado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques 
+                            (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho
+                        </p>
+                        <p>
+                            O intuito da ferramenta é analisar políticas de privacidade e apresentar um resumo do propósito institucional da 
+                            acerca do tratamento de dados requeridos a fim de conscientizar o titular dos dados.
+                        </p>
                     </v-card-subtitle>
                 </v-card>
                 </div>
