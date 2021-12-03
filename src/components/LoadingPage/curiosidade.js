@@ -10,7 +10,13 @@ let curiosity_serious = [
     },
     {
         "img": "search.png", "text": "Em caso de alteração de informação de tratamento de dados, o controlador deverá informar ao titular as alterações. Podendo o titular revogá-lo caso discorde da alteração."
-    }
+    },
+    {
+        "img": "normal.png", "text": "Em caso de intimações legais e ações judiciais a empresa podera utilizar seus dados para defesa da mesma."
+    },
+    {
+        "img": "nerd.png", "text": "A aplicação não coleta nenhuma informação do usuário, portanto não há politica de privacidade nela. "
+    },
 ]
 
 let curiosity_funny = [
@@ -18,7 +24,13 @@ let curiosity_funny = [
         "img": "angry.png", "text": "Nunca tente pedir um café para a aplicação! O Segurindo pode ficar nervoso!"
     },
     {
-        "img": "doubt.png", "text": "Os criadores, em um momento de loucura, apelidou a aplicação e o mascote como Segurindo. A mistura de segurança e lindo não ficou muito boa."
+        "img": "doubt.png", "text": "Os criadores, em um momento de loucura, apelidaram a aplicação e o mascote como Segurindo. A mistura de segurança e lindo não ficou muito boa."
+    },
+    {
+        "img": "normal.png", "text":"O sabor favorito de sorvete do Segurindo é flocos, mesmo ele sendo apenas um cadeado com olhos."
+    },
+    {
+        "img": "search.png", "text":"Não se preocupe, os desenvolvedores da aplicação não vão saber de qual empresa é a politica de privacidade, mas o segurindo vai e vai te julgar por isso."
     }
 ]
 
@@ -28,6 +40,15 @@ let curiosity_LGPD = [
     },
     {
         "img": "surprise.png", "text": "Art 20 LGPD: O titular dos dados tem direito a solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado."
+    },
+    {
+        "img": "surprise.png", "text": "Art 20 LGPD: O titular dos dados tem direito a solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado."
+    },
+    {
+        "img": "surprise.png", "text": "Art 4 LGPD: A lei não se aplica ao tratamneto feito por pessoa natural para fins não economicos, fins jornalísticos e artísticos"
+    },
+    {
+        "img": "surprise.png", "text": "Art 4 LGPD: A lei não se aplica ao tratamneto feito por pessoa natural para fins não economicos, fins jornalísticos e artísticos"
     }
 ]
 
