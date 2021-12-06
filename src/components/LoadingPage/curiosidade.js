@@ -21,7 +21,7 @@ let curiosity_serious = [
 
 let curiosity_funny = [
     {
-        "img": "angry.png", "text": "Nunca tente pedir um café para a aplicação! O Segurindo pode ficar nervoso!"
+        "img": "angry.png", "text": "Nunca tente pedir um café para a aplicação! O Segurindo pode ficar nervosamente triste!"
     },
     {
         "img": "doubt.png", "text": "Os criadores, em um momento de loucura, apelidaram a aplicação e o mascote como Segurindo. A mistura de segurança e lindo não ficou muito boa."
@@ -42,7 +42,7 @@ let curiosity_LGPD = [
         "img": "surprise.png", "text": "Art 20 LGPD: O titular dos dados tem direito a solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado."
     },
     {
-        "img": "surprise.png", "text": "Art 4 LGPD: A lei não se aplica ao tratamneto feito por pessoa natural para fins não economicos, fins jornalísticos e artísticos"
+        "img": "surprise.png", "text": "Art 4 LGPD: A lei não se aplica ao tratamento feito por pessoa natural para fins não econômicos, fins jornalísticos e artísticos"
     }
 ]
 

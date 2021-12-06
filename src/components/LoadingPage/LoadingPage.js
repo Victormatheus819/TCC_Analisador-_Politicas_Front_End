@@ -17,7 +17,8 @@ export default {
 		browserEvent: true,
 		processError:false,
 		subtitle_text: "Espere até o carregamento da análise estar concluído",
-		errorMessage: "Ocorreu um erro no processamento do texto!"
+		errorMessage: "Ocorreu um erro no processamento do texto!",
+		modalTitle: "Erro no sistema!"
 	}),
 	methods: {
 		redirectResult() {
@@ -89,6 +90,13 @@ export default {
 					if(error.response.data)
 					{
 						this.errorMessage = error.response.data.error;
+
+						console.log(error.response)
+
+						if(error.response.status === 418)
+						{
+							this.modalTitle = "CAFÉ NÃO!!!"
+						}
 					}
 					this.processError = true;
 				}
