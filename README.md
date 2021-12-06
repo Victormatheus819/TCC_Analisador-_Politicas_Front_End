@@ -1,4 +1,4 @@
-# tcc-front
+# Segurindo analisador
 
 ## Project setup
 ```

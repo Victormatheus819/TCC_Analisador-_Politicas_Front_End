@@ -118,7 +118,7 @@
 			>
 				<v-card>
 					<v-toolbar color="red darken-3" dark class="title-section-secondary">
-						Erro no sistema!
+						{{modalTitle}}
 					</v-toolbar>
 			
 					<v-card-text>

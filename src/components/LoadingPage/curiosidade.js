@@ -21,7 +21,7 @@ let curiosity_serious = [
 
 let curiosity_funny = [
     {
-        "img": "angry.png", "text": "Nunca tente pedir um café para a aplicação! O Segurindo pode ficar nervoso!"
+        "img": "angry.png", "text": "Nunca tente pedir um café para a aplicação! O Segurindo pode ficar nervosamente triste!"
     },
     {
         "img": "doubt.png", "text": "Os criadores, em um momento de loucura, apelidaram a aplicação e o mascote como Segurindo. A mistura de segurança e lindo não ficou muito boa."
