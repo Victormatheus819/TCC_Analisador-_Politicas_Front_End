@@ -170,10 +170,23 @@
   -khtml-border-radius: 50%;
   border-radius: 50%;
   display: table;
-  background: #d2e3fc;
-  color: #4285f4;
   text-align: center;
   margin-right: 20px;
+}
+.dot-one
+{
+  background: #fdf9d0;
+  color: #b8a713;
+}
+.dot-two
+{
+  background: #d2e3fc;
+  color: #4285f4; 
+}
+.dot-three
+{
+  background: #d1ffc8;
+  color: #329c23;
 }
 .dot-text
 {
@@ -329,6 +342,7 @@
   display: block !important;
   position: absolute;
   margin-top: -70px;
+  box-shadow: 0 4px 10px rgb(1 11 59 / 40%);
 }
 .icon-info img
 {

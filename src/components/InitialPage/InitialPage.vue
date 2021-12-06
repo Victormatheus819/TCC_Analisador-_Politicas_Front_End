@@ -25,15 +25,15 @@
 
             <v-col class="steps">
                 <div>
-                    <span class="dot-number">1</span>
+                    <span class="dot-number dot-one">1</span>
                     <span class="dot-text">Indique URL da política de privacidade desejada na barra indicada</span>
                 </div>
                 <div>
-                    <span class="dot-number">2</span>
+                    <span class="dot-number dot-two">2</span>
                     <span class="dot-text">Clique no botão analisar e espere um pouco a análise acabar</span>
                 </div>
                 <div>
-                    <span class="dot-number">3</span>
+                    <span class="dot-number dot-three">3</span>
                     <span class="dot-text">Depois clique em ver resultado e a análise será apresentada</span>
                 </div>
             </v-col>
@@ -55,13 +55,14 @@
                     </v-card-title>
                     <v-card-subtitle class="initial-card-subtitle">
                         <p>
-                            Esta lei dispõe sobre o tratamento de pessoas, inclusive nos meios digitais, por pessoa natural ou por pessoa 
-                            jurídica de direito público ou privado, com o objetivo de proteger os direitos fundamentais de liberdade e de 
-                            privacidade e o livre desenvolvimento da personalidade da pessoa natural.
+                            A Lei Geral de Proteção de Dados (13.709/2018), abreviada como LGPD, dispõe sobre o tratamento de pessoas, 
+                            inclusive nos meios digitais, por pessoa natural ou por pessoa jurídica de direito público ou privado, com 
+                            o objetivo de proteger os direitos fundamentais de liberdade e de privacidade e o livre desenvolvimento da 
+                            personalidade da pessoa natural.
                         </p>
                         <p>    
-                            A Lei Geral de Proteção de Dados (13.709/2018) também tem como foco a padronização de regulamentos e práticas 
-                            para promover a proteção aos dados pessoais de todo cidadão que esteja no Brasil ou no exterior.
+                            A lei também tem como foco a padronização de regulamentos e práticas para promover a proteção aos dados 
+                            pessoais de todo cidadão que esteja no Brasil ou no exterior.
                         </p>
                         <p>
                             <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm'>LINK PARA LGPD (LEI 13.709/2018)</a>
@@ -80,7 +81,7 @@
                         </p>
                         <p>
                             Realizado por Victor Matheus Pereira de Azevedo (<a>victorazevedo@id.uff.br</a>) e Victor Rodrigues Marques 
-                            (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho
+                            (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho (<a>viterbo@ic.uff.br</a>)
                         </p>
                         <p>
                             O intuito da ferramenta é analisar políticas de privacidade e apresentar um resumo do propósito institucional da 

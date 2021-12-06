@@ -7,7 +7,7 @@
         <v-avatar :tile="true">
             <img :src="require('@/assets/img/search.png')" alt="logo">
         </v-avatar>
-        <v-toolbar-title class="white--text title" style='font-size: 1.6em !important'>Segurindo analisador</v-toolbar-title>
+        <v-toolbar-title class="white--text title" style='font-size: 1.6em !important'>Segurindo</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
