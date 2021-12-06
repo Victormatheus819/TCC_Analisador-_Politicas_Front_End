@@ -42,7 +42,7 @@ let curiosity_LGPD = [
         "img": "surprise.png", "text": "Art 20 LGPD: O titular dos dados tem direito a solicitar a revisão de decisões tomadas unicamente com base em tratamento automatizado."
     },
     {
-        "img": "surprise.png", "text": "Art 4 LGPD: A lei não se aplica ao tratamneto feito por pessoa natural para fins não economicos, fins jornalísticos e artísticos"
+        "img": "surprise.png", "text": "Art 4 LGPD: A lei não se aplica ao tratamento feito por pessoa natural para fins não econômicos, fins jornalísticos e artísticos"
     }
 ]
 
