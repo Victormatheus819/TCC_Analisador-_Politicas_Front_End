@@ -35,12 +35,12 @@ export default {
 			document.getElementById("generic_flag").style.color ="#FFFFFF"
 		}
 		if(this.result.coleta == []){
-			document.getElementById("dados_subtitle").innerHTML = "Essa política de privacidade não indica especificamente sobre dados coletados, por isso não foi possível extrair um conteúdo."
+			document.getElementById("dados_subtitle").innerHTML = "<b class='sinalizer-red'>Essa política de privacidade não indica especificamente sobre dados coletados, por isso não foi possível extrair um conteúdo.</b>"
 		}else{
 			document.getElementById("dados_subtitle").innerHTML = this.result.coleta	
 		}
 		if(this.result.finalidade == []){
-			document.getElementById("finalidade_subtitle").innerHTML = "Essa política de privacidade não indica especificamente sobre a finalidade de uso dos dados, por isso não foi possível extrair um conteúdo."
+			document.getElementById("finalidade_subtitle").innerHTML = "<b class='sinalizer-red'>Essa política de privacidade não indica especificamente sobre a finalidade de uso dos dados, por isso não foi possível extrair um conteúdo.</b>"
 		}else{
 			document.getElementById("finalidade_subtitle").innerHTML = this.result.finalidade
 		}
