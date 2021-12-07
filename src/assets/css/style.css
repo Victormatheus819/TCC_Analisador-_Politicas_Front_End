@@ -38,6 +38,7 @@
   font-size: 30px;
 }
 .sp-text,
+.sp-text-step,
 .sp-text-generic
 {
   display: block;
@@ -47,6 +48,10 @@
   color: rgb(48, 48, 48);
   text-align: center;
   margin: auto;
+}
+.sp-text,
+.sp-text-generic
+{
   margin-top: 25px;
 }
 .sp-text-generic
@@ -342,7 +347,6 @@
   display: block !important;
   position: absolute;
   margin-top: -70px;
-  box-shadow: 0 4px 10px rgb(1 11 59 / 40%);
 }
 .icon-info img
 {

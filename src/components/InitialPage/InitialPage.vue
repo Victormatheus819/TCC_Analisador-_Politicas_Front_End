@@ -65,7 +65,7 @@
                             pessoais de todo cidadão que esteja no Brasil ou no exterior.
                         </p>
                         <p>
-                            <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm'>LINK PARA LGPD (LEI 13.709/2018)</a>
+                            <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm' target="_blank">LINK PARA LGPD (LEI 13.709/2018)</a>
                         </p>
                     </v-card-subtitle>
                 </v-card>

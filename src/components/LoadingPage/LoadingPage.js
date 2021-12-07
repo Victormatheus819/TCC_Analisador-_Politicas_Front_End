@@ -91,8 +91,6 @@ export default {
 					{
 						this.errorMessage = error.response.data.error;
 
-						console.log(error.response)
-
 						if(error.response.status === 418)
 						{
 							this.modalTitle = "CAFÉ NÃO!!!"
@@ -103,7 +101,7 @@ export default {
 			)
 		},
 		async manualInclusion(){
-			http.post("/socket/manual-inclusion").then(
+			await http.post("/socket/manual-inclusion").then(
 				response=>
 				{
 					this.id = response.data.id;
