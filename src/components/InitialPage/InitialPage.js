@@ -54,5 +54,6 @@ export default {
 			this.url = this.urlProps;
 			this.isModalVisible = true;
 		}
+		window.scrollTo(0, 0);
 	}
 }

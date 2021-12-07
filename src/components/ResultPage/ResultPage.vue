@@ -11,7 +11,7 @@
                         :src="require('@/assets/img/obg.png')"
                     >
                 </div>
-                <span class="sp-text">
+                <span class="sp-text-step">
                     Análise finalizada para a política de privacidade indicada. Ressaltamos que as informações são retiradas diretamente do documento gerado pela empresa e informado no início do processo.
                 </span>
             </div>
@@ -54,12 +54,22 @@
 
         <v-row class="section center-text">
             <h1 class="title-section-secondary marked-third">
-                Continue com outra análise
+                Segurindo informa
             </h1>
 
             <div class="icon-info">
                 <img draggable="false" :src="require('@/assets/img/search.png')"/>
             </div>
+
+            <span class="sp-text">
+                Segurindo foi criado tendo como inspiração diretrizes da LGPD (Lei Geral de Proteção de Dados), especificamente em relação a 
+                diretriz de <b class="sinalizer">finalidade</b>. Saiba mais informações sobre a lei 
+                <a href='http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm' target="_blank">clicando aqui</a>. 
+            </span>
+
+            <span class="sp-text">
+                Se preferir realize outra análise:
+            </span>
 
             <v-col class="search-section">
                 <button class="btn-confirm" @click="redirect()">
