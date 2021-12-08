@@ -46,8 +46,8 @@
 			<h1 class="title-section-secondary marked-second">
                 Aprenda mais...
             </h1>
-			<div class="icon-info">
-                <img draggable="false" :src="require('@/assets/img/victory.png')"/>
+			<div class="icon-info-siren">
+                <img draggable="false" :src="require('@/assets/img/siren.gif')"/>
             </div>
 
 			<v-col>
