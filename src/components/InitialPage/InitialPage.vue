@@ -84,7 +84,7 @@
                             (<a>victorrm@id.uff.br</a>), com a orientação de José Viterbo Filho (<a>viterbo@ic.uff.br</a>)
                         </p>
                         <p>
-                            O intuito da ferramenta é analisar políticas de privacidade e apresentar um resumo do propósito institucional da 
+                            O intuito da ferramenta é analisar políticas de privacidade e apresentar um resumo do propósito institucional 
                             acerca do tratamento de dados requeridos a fim de conscientizar o titular dos dados.
                         </p>
                     </v-card-subtitle>
