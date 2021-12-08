@@ -315,6 +315,14 @@
     rgba(90, 154, 250, 0.3)
   );
 }
+.marked-fourth{
+  background-image: linear-gradient(
+    to right,
+    rgba(85, 252, 99, 0.1),
+    rgba(97, 255, 97, 0.7) 4%,
+    rgba(109, 250, 90, 0.3)
+  );
+}
 .text-alert
 {
   font-size: 18px;
@@ -345,7 +353,7 @@
 }
 .img-container img
 {
-  max-width: 60%;
+  max-width: 600px;
   filter: drop-shadow(0 0 2rem rgb(109, 109, 109))
 }
 .icon-info,

@@ -18,7 +18,7 @@
         </v-row>
  
         <v-row class="section center-text">
-            <h1 class="title-section-secondary marked-second">
+            <h1  class="title-section-secondary " :class="this.result.politica_generica ? 'marked-second' : 'marked-fourth'">
                 Resultado da análise
             </h1>
             <div class="icon-info">
