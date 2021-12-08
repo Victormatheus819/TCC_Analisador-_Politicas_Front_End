@@ -70,11 +70,16 @@ export default {
 				}
 			}		
 		},
-		processText() {
+		async processText() {
+			
+			await new Promise(resolve => setTimeout(resolve, 5000));
+
 			http.post("/api/process", { id: this.id, url: this.url }).then(
-				response => {
+				async response => {
 
 					this.result = response.data;
+
+					await new Promise(resolve => setTimeout(resolve, 3000));
 
 					this.increasing_pct = 100;
 					this.subtitle_text = "Seu processamento está completo";
