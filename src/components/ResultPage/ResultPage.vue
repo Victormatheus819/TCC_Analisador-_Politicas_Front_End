@@ -12,7 +12,7 @@
                     >
                 </div>
                 <span class="sp-text-step">
-                    Análise finalizada para a política de privacidade indicada. Ressaltamos que as informações são retiradas diretamente do documento gerado pela empresa e informado no início do processo.
+                    Análise finalizada para a política de privacidade indicada. <b class='marked'>Ressaltamos que as informações são retiradas diretamente do documento gerado pela empresa e informado no início do processo.</b>
                 </span>
             </div>
         </v-row>
@@ -22,12 +22,24 @@
                 Resultado da análise
             </h1>
             <div class="icon-info">
-                <img draggable="false" :src="require('@/assets/img/victory.png')"/>
+                <img draggable="false" :src="require('@/assets/img/normal.png')"/>
             </div>
-            
-            <span class="sp-text-generic" id="generic_flag" >
-                Informação de política genérica aqui
+
+            <span class="sp-text-generic" id="generic_flag">
+
+                <div v-if="this.result.politica_generica" color="#FFFF00">
+                    <img draggable="false" :src="require('@/assets/img/siren.gif')"/>
+                    O sistema considerou essa política de privacidade genérica! Tenha atenção ao avaliar a política.
+                    <img draggable="false" :src="require('@/assets/img/siren.gif')"/>
+                </div>
+                
+                <div v-else color="#FFFFFF">
+                    Informações extraidas diretamente da política de privacidade. O sistema apenas resumiu as informações.
+                </div>
+                
             </span>
+            
+
                 <div class="result-review">
                     <v-card color="divght_grey" elevation="18" shaped>
                         <v-card-title class="text-h5 orange-marker">

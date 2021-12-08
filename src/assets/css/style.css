@@ -345,24 +345,45 @@
 }
 .img-container img
 {
-  max-width: 40%;
+  max-width: 60%;
+  filter: drop-shadow(0 0 2rem rgb(109, 109, 109))
 }
-.icon-info
+.icon-info,
+.icon-info-siren
 {
   display: block !important;
   position: absolute;
+}
+.icon-info
+{
   margin-top: -70px;
+}
+.icon-info-siren
+{
+  margin-top: -50px;
 }
 .icon-info img
 {
   height: 85px;
   width: 85px;
+  filter: drop-shadow(0 0 1rem rgb(255, 255, 255))
+}
+.icon-info-siren img
+{
+  height: 40px;
+  width: 40px;
 }
 .dialog-img
 {
   height: 100px;
   width: 100px;
   margin-left: -20px;
+}
+.sp-text-generic img
+{
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
 }
 
 /*************** LOADING SPINNER ***************/
@@ -456,6 +477,7 @@
   .title-section-secondary
   {
     font-size: 24px;
+    margin-left: 20px;
   }
   .sp-text 
   {
@@ -519,6 +541,28 @@
   .button-info-text
   {
     display: none;
+  }
+  .img-container img
+  {
+    max-width: 40%;
+  }
+  .icon-info
+  {
+    margin-top: -60px;
+    margin-left: -10px;
+  }
+  .icon-info img
+  {
+    height: 75px;
+    width: 75px;
+  }
+  .icon-info-siren
+  {
+    margin-top: -40px;
+  }
+  .curiosity-text
+  {
+    font-size: 1.5em;
   }
 
 }

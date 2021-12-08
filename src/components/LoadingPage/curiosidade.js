@@ -9,10 +9,10 @@ let curiosity_serious = [
         "img": "surprise.png", "text": "Mesmo após a dissolução de uma empresa, os seus dados compartilhados e tratados por ela continuam legislativamente com a mesma proteção."
     },
     {
-        "img": "search.png", "text": "Em caso de alteração de informação de tratamento de dados, o controlador deverá informar ao titular as alterações. Podendo o titular revogá-lo caso discorde da alteração."
+        "img": "search.png", "text": "Qunado alterado as informação de tratamento de dados, o controlador deverá informar ao titular (podendo esse revogar se considerar discordância)"
     },
     {
-        "img": "normal.png", "text": "Em caso de intimações legais e ações judiciais a empresa poderá utilizar seus dados para sua defesa."
+        "img": "sad.png", "text": "Em caso de intimações legais e ações judiciais a empresa poderá utilizar seus dados para sua defesa."
     },
     {
         "img": "nerd.png", "text": "A aplicação não coleta nenhuma informação do usuário, portanto não há necessidade de política de privacidade."
@@ -30,7 +30,7 @@ let curiosity_funny = [
         "img": "normal.png", "text":"O sabor favorito de sorvete do Segurindo é flocos, mesmo ele sendo apenas um cadeado com olhos."
     },
     {
-        "img": "search.png", "text":"Não se preocupe, os desenvolvedores da aplicação não vão saber de qual empresa é a politica de privacidade, mas o segurindo vai...e vai te julgar por isso."
+        "img": "search.png", "text":"Os desenvolvedores da aplicação não vão saber de qual empresa é a politica de privacidade, mas o segurindo vai...e vai te julgar por isso."
     }
 ]
 
