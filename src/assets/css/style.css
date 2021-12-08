@@ -353,7 +353,7 @@
 }
 .img-container img
 {
-  max-width: 600px;
+  max-width: 300px;
   filter: drop-shadow(0 0 2rem rgb(109, 109, 109))
 }
 .icon-info,
