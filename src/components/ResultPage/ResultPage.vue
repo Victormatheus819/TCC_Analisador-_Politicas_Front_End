@@ -12,7 +12,7 @@
                     >
                 </div>
                 <span class="sp-text-step">
-                    Análise finalizada para a política de privacidade indicada. <b class='marked'>Ressaltamos que as informações são retiradas diretamente do documento gerado pela empresa e informado no início do processo.</b>
+                    Análise finalizada para a política de privacidade indicada. <b class='marked'>As informações aoresentadas são retiradas diretamente do documento da URL informado no início do processo.</b>
                 </span>
             </div>
         </v-row>

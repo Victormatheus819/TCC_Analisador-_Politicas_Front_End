@@ -10,7 +10,7 @@
 }
 .section
 {
-  padding: 3% 2% 3%;
+  padding: 30px 2% 5px;
   justify-items: center;
 }
 .center-text
@@ -331,12 +331,10 @@
 }
 .sinalizer
 {
-  text-decoration:underline ;
-  color:#283593;
+  color:#313dee;
 }
 .sinalizer-red
 {
-  text-decoration:underline ;
   color:#c52727;
 }
 
