@@ -134,6 +134,8 @@
 					</v-card-actions>
 				</v-card>
 		</v-dialog>
+		
+		<audio id ="notifi" src="@/assets/sounds/notification.mp3"></audio>
 
 	</v-container>
 </template>
