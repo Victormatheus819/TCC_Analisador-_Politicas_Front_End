@@ -25,7 +25,7 @@
 					<span class="button-info-text" v-if="increasing_pct!=100">
 						Para cancelar a análise que está sendo realizada 👉
 					</span>
-					<span class="button-info-text marked" v-else>
+					<span class="button-info-text marked-fourth" v-else>
 						Para visualizar o resultado da análise 👉
 					</span>
 
@@ -134,6 +134,8 @@
 					</v-card-actions>
 				</v-card>
 		</v-dialog>
+		
+		<audio id ="notifi" src="@/assets/sounds/notification.mp3"></audio>
 
 	</v-container>
 </template>

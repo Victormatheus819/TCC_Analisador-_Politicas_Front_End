@@ -47,7 +47,7 @@ export default {
 				return;
 			}
             
-			this.socket = new WebSocket('wss:/tcc-analise-poli-priv.herokuapp.com/0/ws/connect/');
+			this.socket = new WebSocket('wss:/tcc-analise-poli-priv.herokuapp.com/ws/connect/');
        
 			this.socket.onerror = function()
 			{
@@ -71,19 +71,16 @@ export default {
 			}		
 		},
 		async processText() {
-			
-			await new Promise(resolve => setTimeout(resolve, 5000));
-
 			http.post("/api/process", { id: this.id, url: this.url }).then(
 				async response => {
 
 					this.result = response.data;
 
 					await new Promise(resolve => setTimeout(resolve, 3000));
-
+                    
 					this.increasing_pct = 100;
 					this.subtitle_text = "Seu processamento está completo";
-					
+					document.getElementById('notifi').play();
 					if(this.socket != undefined)
 					{
 						this.socket.close();
