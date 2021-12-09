@@ -9,7 +9,7 @@ let curiosity_serious = [
         "img": "surprise.png", "text": "Mesmo após a dissolução de uma empresa, os seus dados compartilhados e tratados por ela continuam legislativamente com a mesma proteção."
     },
     {
-        "img": "search.png", "text": "Qunado alterado as informação de tratamento de dados, o controlador deverá informar ao titular (podendo esse revogar se considerar discordância)"
+        "img": "search.png", "text": "Quando alterado as informação de tratamento de dados, o controlador deverá informar ao titular (podendo esse revogar se considerar discordância)"
     },
     {
         "img": "sad.png", "text": "Em caso de intimações legais e ações judiciais a empresa poderá utilizar seus dados para sua defesa."

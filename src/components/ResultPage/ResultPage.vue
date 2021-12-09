@@ -12,13 +12,13 @@
                     >
                 </div>
                 <span class="sp-text-step">
-                    Análise finalizada para a política de privacidade indicada. <b class='marked'>Ressaltamos que as informações são retiradas diretamente do documento gerado pela empresa e informado no início do processo.</b>
+                    Análise finalizada para a política de privacidade indicada. <b class='marked'>As informações aoresentadas são retiradas diretamente do documento da URL informado no início do processo.</b>
                 </span>
             </div>
         </v-row>
  
         <v-row class="section center-text">
-            <h1 class="title-section-secondary marked-second">
+            <h1  class="title-section-secondary " :class="this.result.politica_generica ? 'marked-second' : 'marked-fourth'">
                 Resultado da análise
             </h1>
             <div class="icon-info">
