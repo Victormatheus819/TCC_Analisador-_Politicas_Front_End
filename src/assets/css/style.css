@@ -278,7 +278,8 @@
 /* destaque */
 .marked,
 .marked-second,
-.marked-third
+.marked-third,
+.marked-fourth
 {
   margin: 0 -0.4em;
   padding: 0.1em 0.4em;
@@ -315,12 +316,13 @@
     rgba(90, 154, 250, 0.3)
   );
 }
-.marked-fourth{
+.marked-fourth
+{
   background-image: linear-gradient(
     to right,
     rgba(85, 252, 99, 0.1),
-    rgba(97, 255, 97, 0.7) 4%,
-    rgba(109, 250, 90, 0.3)
+    rgba(123, 255, 97, 0.7) 4%,
+    rgba(103, 250, 90, 0.3)
   );
 }
 .text-alert
