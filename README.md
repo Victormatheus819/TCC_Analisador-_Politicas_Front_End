@@ -27,7 +27,7 @@ Instalar dependências:
 
     npm install 
 
-Rodar servidor (porta 8000):
+Rodar servidor:
 
     npm run serve
 
@@ -35,23 +35,33 @@ Rodar servidor (porta 8000):
 
 O projeto se econtra dividido em 5 principais diretórios:
 
-:small_blue_diamond: assets: no qual ficam as imagens estilos e sons da aplicação .
+:small_blue_diamond: assets: no qual ficam as imagens, estilos e sons da aplicação.
 
-:small_blue_diamond: components: no qual ficam os componete usados na montagem da aplicação 
+:small_blue_diamond: components: no qual ficam os componentes usados na montagem da aplicação.
 
 :small_blue_diamond: plugins: no qual fica localizado os arquivos do plugin vuetify.
 
-:small_blue_diamond: router: no qual ficam as rotas da aplicação no caso uma só.
+:small_blue_diamond: router: no qual ficam a gestão de rotas de acesso da aplicação.
 
-:small_blue_diamond: views: no qual se econtra paginas adjacentes da aplicação
+:small_blue_diamond: views: no qual se econtra páginas adjacentes da aplicação.
 
     |____assets
 
         |____css
 
-            |____style.css
+        |____img
+
+        |____sounds
 
     |____components
+
+        |____config
+
+        |____InitialPage
+
+        |____LoadingPage
+
+        |____ResultPage
 
     |____plugins
 
@@ -61,4 +71,4 @@ O projeto se econtra dividido em 5 principais diretórios:
 
 # Repositórios relacionados
 
-Repositório com um servidor que fornece a api para esta inteface web : https://github.com/Victy0/TCC_Analisador_Politicas
+Repositório com um servidor que fornece a API para esta inteface web: https://github.com/Victy0/TCC_Analisador_Politicas
