@@ -97,6 +97,11 @@ export default {
 						{
 							this.modalTitle = "CAFÉ NÃO!!!"
 						}
+
+						if(error.response.status === 401)
+						{
+							this.errorMessage = "Heroku está atrasando o processo. Tente novamente!";
+						}
 					}
 					this.processError = true;
 				}
