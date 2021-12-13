@@ -100,7 +100,7 @@ export default {
 
 						if(error.response.status === 401)
 						{
-							this.errorMessage = "Heroku está atrasando o processo. Tente novamente!";
+							this.errorMessage = "Infelizmente o servidor grátis que usamos está lento. Tente novamente!";
 						}
 					}
 					this.processError = true;
