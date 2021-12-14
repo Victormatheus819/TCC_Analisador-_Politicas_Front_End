@@ -41,7 +41,7 @@
 
 		</v-row>
 
-		<v-row class="section center-text">
+		<v-row class="section curiosity center-text">
 
 			<h1 class="title-section-secondary marked-second">
                 Aprenda mais...
