@@ -7,7 +7,7 @@
         <v-avatar :tile="true">
             <img :src="require('@/assets/img/search.png')" alt="logo">
         </v-avatar>
-        <v-toolbar-title class="white--text title" style='font-size: 1.6em !important'>Segurindo</v-toolbar-title>
+        <v-toolbar-title class="white--text title" @click="goToHome()" style='font-size: 1.6em !important'>Segurindo</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -30,6 +30,11 @@ export default {
     data: () => ({
     //
     }),
+    methods:{
+      goToHome(){
+          this.$router.push({name:'InitialPage'});
+      }
+    },
     mounted(){
         console.log("There is a cofee is waiting for you")
     },

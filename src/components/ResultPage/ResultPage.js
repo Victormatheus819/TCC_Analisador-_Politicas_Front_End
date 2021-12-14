@@ -50,9 +50,11 @@ export default {
 		}
 	},
 	beforeRouteLeave(to, from, next) {
-		if(this.browserEvent)
+		if(this.browserEvent && to.name!= "InitialPage")
 		{
+			console.log(to.name)
 			next(false);
+			
 		}
 		else
 		{
