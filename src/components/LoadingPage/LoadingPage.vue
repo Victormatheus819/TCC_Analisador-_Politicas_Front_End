@@ -52,6 +52,7 @@
 
 			<v-col>
 				<v-carousel 
+					cycle
 					height="550" 
 					hide-delimiter-background 
 					show-arrows-on-hover

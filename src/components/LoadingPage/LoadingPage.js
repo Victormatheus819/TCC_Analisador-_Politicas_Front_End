@@ -23,7 +23,7 @@ export default {
 	methods: {
 		redirectResult() {
 			this.browserEvent = false;
-			this.$router.push({ name: 'ResultPage', params: { result: this.result } });
+			this.$router.push({ name: 'ResultPage', params: { result: this.result, url: this.url } });
 		},
 		redirectInitial(error) {
 			this.browserEvent = false;

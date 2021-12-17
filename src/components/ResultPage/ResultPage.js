@@ -1,6 +1,6 @@
 export default {
 	name: 'ResultPage',
-	props: { result: { type: Object, required: true } },
+	props: { result: { type: Object, required: true }, url: { type: String, required: true } },
 	data: () => ({
 		texto_finalidade: "finalidade",
 		texto_dados: "coleta dados",
@@ -10,6 +10,10 @@ export default {
 		redirect() {
 			this.browserEvent = false;
 			this.$router.push("/")
+		},
+		goToPriv(){
+			console.log(this.url)
+			window.location.replace(this.url)
 		}
 	},
 	mounted() {

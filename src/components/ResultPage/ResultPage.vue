@@ -61,7 +61,8 @@
                             Carregando dados...
                         </v-card-subtitle>
                     </v-card>
-                </div>   
+                </div> 
+            <span class="sp-text-step" @click="goToPriv()" >Link para a politica de privacidade na integra: <span class="sinalizer" >{{this.url}}</span></span>      
         </v-row>
 
         <v-row class="section center-text">
