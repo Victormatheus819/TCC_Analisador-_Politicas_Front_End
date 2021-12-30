@@ -10,10 +10,6 @@ export default {
 		redirect() {
 			this.browserEvent = false;
 			this.$router.push("/")
-		},
-		goToPriv(){
-			console.log(this.url)
-			window.location.replace(this.url)
 		}
 	},
 	mounted() {
