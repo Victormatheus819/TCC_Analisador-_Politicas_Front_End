@@ -62,7 +62,7 @@
                         </v-card-subtitle>
                     </v-card>
                 </div> 
-            <span class="sp-text-step" @click="goToPriv()" >Link para a politica de privacidade na integra: <span class="sinalizer" >{{this.url}}</span></span>      
+            <span class="sp-text-step">Link para a politica de privacidade na integra: <a v-bind:href="this.url" target="_blank">{{this.url}}</a></span>      
         </v-row>
 
         <v-row class="section center-text">
