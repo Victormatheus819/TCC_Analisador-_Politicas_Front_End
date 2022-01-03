@@ -44,6 +44,7 @@ let curiosity_LGPD = [
     {
         "img": "surprise.png", "text": "Art 4 LGPD: A lei não se aplica ao tratamento feito por pessoa natural para fins não econômicos, fins jornalísticos e artísticos."
     }
+
 ]
 
 export function curiosityList()
